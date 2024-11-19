@@ -7,13 +7,15 @@
 
 <h2 align="center" style="border-bottom-style: none !important;">Comprehensively Innovative Experiment of Information Security - Android Malware Detection Model Based on Graph Neural Network</h2>
 
+<p align="center" style="text-align:center">Ciallo ～(∠・ω< )⌒★</p>
+
 <p align="center" style="text-align:center">
     <img src="https://img.shields.io/badge/version-v0.1.0-brightgreen" alt="version">
     <img src="https://img.shields.io/badge/python-3.9+-yellow" alt="python">
     <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="contributions">
 </p>
 
-<p style="text-align:center">English | <a href="README_zh-CN.md">中文</a></p>
+<p  align="center" style="text-align:center">English | <a href="README_zh-CN.md">中文</a></p>
 
 ## Task Description
 

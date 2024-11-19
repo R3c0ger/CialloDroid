@@ -7,13 +7,15 @@
 
 <h2 align="center" style="border-bottom-style: none !important;"> 信息安全创新综合实验——基于图神经网络的安卓恶意软件检测模型 </h2>
 
+<p align="center" style="text-align:center">Ciallo ～(∠・ω< )⌒★</p>
+
 <p align="center" style="text-align:center">
     <img src="https://img.shields.io/badge/version-v0.1.0-brightgreen" alt="version">
     <img src="https://img.shields.io/badge/python-3.9+-yellow" alt="python">
     <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="contributions">
 </p>
 
-<p style="text-align:center"> 中文 | <a href="README.md"> English </a> </p>
+<p  align="center" style="text-align:center"> 中文 | <a href="README.md"> English </a> </p>
 
 ## 任务书
 
