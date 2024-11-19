@@ -95,4 +95,8 @@ ENV/
 *.doc[xm]
 *.psd
 *.ini
-log
+data/
+result/
+models/
+reports/
+temp/

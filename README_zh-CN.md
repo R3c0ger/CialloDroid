@@ -37,7 +37,9 @@
 
 ### 可行方法
 
-该系统可行的方法是对安卓应用程序首先进行静态分析，提取应用程序的函数调用图，并对利用现有 [敏感 API 数据集](https://apichecker.github.io/) 对函数调用图进行自动标注。然后设计图卷积神经网络模型，并通过 One-Hot 编码实现对函数调用图的特征编码，对图卷积神经网络模型每个节点特征向量进行初始化，最后利用现有数据集对模型进行训练。其中安卓应用程序静态分析工具可以采用 [Androguard](https://github.com/androguard/androguard)。恶意安卓应用可以从  [VirusShare](https://virusshare.com/) 平台上下载，正常安卓应用可以从 [AndroZoo](https://androzoo.uni.lu/) 平台上下载。
+该系统可行的方法是对安卓应用程序首先进行静态分析，提取应用程序的函数调用图，并利用现有 [敏感 API 数据集](https://apichecker.github.io/) 对函数调用图进行自动标注。然后设计图卷积神经网络模型，并通过 One-Hot 编码实现对函数调用图的特征编码，对图卷积神经网络模型每个节点特征向量进行初始化，最后利用现有数据集对模型进行训练。
+
+其中安卓应用程序静态分析工具可以采用 [Androguard](https://github.com/androguard/androguard)。恶意安卓应用可以从 [VirusShare](https://virusshare.com/) 平台上下载，正常安卓应用可以从 [AndroZoo](https://androzoo.uni.lu/) 平台上下载。
 
 ![architecture](img/architecture-zh.svg)
 
@@ -49,3 +51,12 @@
 4. 设计实验分析方法，要求测试恶意应用和正常应用均不少于 50 个，评估模型的准确率、召回率和 F1 得分；
 5. 根据小组分工，撰写个人课程报告，形成整体作品报告。
 
+## 致谢
+
+- [Androguard](https://github.com/androguard/androguard)
+- [VirusShare](https://virusshare.com/)
+- [AndroZoo](https://androzoo.uni.lu/)
+
+## 许可证
+
+本项目遵循 Apache 2.0 许可证。详细信息请参阅 [LICENSE](LICENSE) 文件。

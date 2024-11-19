@@ -37,7 +37,9 @@ Semantics-based methods typically employ program analysis techniques. Program an
 
 ### Feasible Methods
 
-A feasible approach for this system involves first performing static analysis on Android applications to extract function call graphs and automatically annotate these graphs using an existing [sensitive API dataset](https://apichecker.github.io/). Then, design a graph convolutional neural network (GCN) model and use One-Hot encoding to implement feature encoding for the function call graph, initializing the feature vectors for each node in the GCN model. Finally, train the model using existing datasets. For static analysis of Android applications, tools such as [Androguard](https://github.com/androguard/androguard) can be used. Malicious Android applications can be downloaded from the [VirusShare](https://virusshare.com/) platform, while normal Android applications can be obtained from the [AndroZoo](https://androzoo.uni.lu/) platform.
+A feasible approach for this system involves first performing static analysis on Android applications to extract function call graphs and automatically annotate these graphs using an existing [sensitive API dataset](https://apichecker.github.io/). Then, design a graph convolutional neural network (GCN) model and use One-Hot encoding to implement feature encoding for the function call graph, initializing the feature vectors for each node in the GCN model. Finally, train the model using existing datasets. 
+
+For static analysis of Android applications, tools such as [Androguard](https://github.com/androguard/androguard) can be used. Malicious Android applications can be downloaded from the [VirusShare](https://virusshare.com/) platform, while normal Android applications can be obtained from the [AndroZoo](https://androzoo.uni.lu/) platform.
 
 ![architecture](img/architecture-en.svg)
 
@@ -48,3 +50,13 @@ A feasible approach for this system involves first performing static analysis on
 3. Design and implement a method for training an Android malware detection model based on a graph convolutional neural network (GCN).
 4. Design an experimental analysis method, requiring no fewer than 50 test samples for both malicious and normal applications, to evaluate the model's accuracy, recall rate, and F1 score.
 5. Based on group division of labor, write individual course reports to form a comprehensive project report.
+
+## Acknowledgement
+
+- [Androguard](https://github.com/androguard/androguard)
+- [VirusShare](https://virusshare.com/)
+- [AndroZoo](https://androzoo.uni.lu/)
+
+## License
+
+This library is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for more details.
