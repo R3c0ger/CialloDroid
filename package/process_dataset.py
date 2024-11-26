@@ -1,14 +1,15 @@
-import os
 import traceback
+from collections import defaultdict
 from pathlib import Path
-import torch
+from typing import Dict, List, Optional
+
 import dgl
 import networkx as nx
+import torch
+from androguard.core.analysis.analysis import MethodAnalysis
 from androguard.misc import AnalyzeAPK
-from androguard.core.analysis.analysis import MethodAnalysis, Analysis
 from pygtrie import StringTrie
-from collections import defaultdict
-from typing import Dict, List, Union, Optional
+
 # from androguard.util import set_log
 # set_log("ERROR")
 
@@ -58,11 +59,15 @@ class FeatureExtractors:
         Group opcodes and assign them an ID
         :return: Mapping from opcode group name to their ID
         """
-        mapping = {x: i for i, x in enumerate(['nop', 'mov', 'return',
-                                               'const', 'monitor', 'check-cast', 'instanceof', 'new',
-                                               'fill', 'throw', 'goto/switch', 'cmp', 'if', 'unused',
-                                               'arrayop', 'instanceop', 'staticop', 'invoke',
-                                               'unaryop', 'binop', 'inline'])}
+        mapping = {
+            x: i for i, x in enumerate([
+                'nop', 'mov', 'return',
+                'const', 'monitor', 'check-cast', 'instanceof', 'new',
+                'fill', 'throw', 'goto/switch', 'cmp', 'if', 'unused',
+                'arrayop', 'instanceop', 'staticop', 'invoke',
+                'unaryop', 'binop', 'inline'
+            ])
+        }
         mapping['invalid'] = -1
         return mapping
 
@@ -224,7 +229,6 @@ def process_apk(apk_path: Path, dest_dir: Path, label: int):
     except Exception as e:
         print(f"Error processing {apk_path}: {e}")
         traceback.print_exc()
-
 
 
 def main():

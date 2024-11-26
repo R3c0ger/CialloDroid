@@ -1,4 +1,4 @@
-from typing import Mapping, Tuple, Optional, Dict
+from typing import Dict
 
 import dgl
 import dgl.nn.pytorch as graph_nn
@@ -19,7 +19,9 @@ class MalwareDetector(nn.Module):
         supported_algorithms = ['GraphConv', 'SAGEConv', 'TAGConv', 'DotGatConv']
         if convolution_algorithm not in supported_algorithms:
             raise ValueError(
-                f"{convolution_algorithm} is not supported. Supported algorithms are {supported_algorithms}")
+                f"{convolution_algorithm} is not supported. "
+                f"Supported algorithms are {supported_algorithms}"
+            )
         self.convolution_layers = ModuleList()  # 使用 ModuleList
         convolution_dimensions = [64, 32, 16]
         for dimension in convolution_dimensions[:convolution_count]:

@@ -1,9 +1,22 @@
 import os
-import requests
 from concurrent.futures import ThreadPoolExecutor
 
+import requests
+
+
+def read_api_key():
+    """从 api.conf 中读取 API Key"""
+    current_dir = os.path.dirname(os.path.abspath(__file__))  # 获取当前目录
+    os.chdir(current_dir)
+
+    with open("api.conf", "r") as file:
+        api_key = file.read().strip()
+        print(f"API Key: {api_key}")
+        return api_key
+
+
 # 配置参数
-API_KEY = "af94de223ecb26f4fca1ed1be86559c4aa890babf5744de547b901c4ccac4e63"  # 替换为你的 AndroZoo API Key
+API_KEY = read_api_key()  # AndroZoo API Key
 INPUT_FILE = "../data/train_old.sha256"  # 包含 SHA256 和文件名的文件
 BENIGN_DIR = "../data/benign"  # 正常软件存放目录
 MALICIOUS_DIR = "../data/malicious"  # 恶意软件存放目录

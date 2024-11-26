@@ -1,12 +1,13 @@
-import os
 import logging
 from pathlib import Path
+
 import torch
-from torch.utils.data import DataLoader
-from torch.optim import Adam
 from torch.nn import BCEWithLogitsLoss
+from torch.optim import Adam
+
 from package.data_module import DataModule
 from package.model import MalwareDetector
+
 
 # 设置日志记录
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
@@ -114,6 +115,7 @@ def main():
     # 训练
     logger.info("Starting training...")
     best_val_loss = float("inf")
+    best_checkpoint_path = None
     for epoch in range(1, CONFIG["train"]["epochs"] + 1):
         logger.info(f"Epoch {epoch}/{CONFIG['train']['epochs']}")
 
@@ -131,7 +133,7 @@ def main():
             best_checkpoint_path = output_dir / "best_model.pt"
             torch.save(model.state_dict(), best_checkpoint_path)
 
-    logger.info("Training complete. Best model saved at: {}".format(best_checkpoint_path))
+    logger.info(f"Training complete. Best model saved at: {best_checkpoint_path}")
 
 
 if __name__ == "__main__":
