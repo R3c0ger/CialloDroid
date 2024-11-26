@@ -8,10 +8,11 @@ pandas
 pygtrie
 seaborn
 pygraphviz
-dgl-cu110
+dgl
 androguard
 torch
 matplotlib
 numpy
 requests
 networkx
+streamlit

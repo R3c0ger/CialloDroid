@@ -95,8 +95,8 @@ ENV/
 *.doc[xm]
 *.psd
 *.ini
-temp/
 
 *.conf
 data/*/
 checkpoints/
+tmp/

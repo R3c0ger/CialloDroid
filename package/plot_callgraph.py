@@ -17,7 +17,8 @@ def plot_call_graph(cg: nx.classes.multidigraph.MultiDiGraph):
         node_list.append(node)
         labels[node] = i
         cm.append('yellow' if node.is_external() else 'blue')
-        legend += f"{i}, \\texttt{{{node.class_name.replace('$', '\\$')} {node.name}}}\n"
+        class_name = node.class_name.replace('$', '\\$')
+        legend += f"{i}, \\texttt{{{class_name} {node.name}}}\n"
     plt.axis('off')
     nx.draw_networkx(
         cg,

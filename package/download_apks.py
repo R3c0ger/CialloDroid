@@ -4,12 +4,14 @@ from concurrent.futures import ThreadPoolExecutor
 import requests
 
 
+# 切换到文件所在目录
+current_dir = os.path.dirname(os.path.abspath(__file__))
+os.chdir(current_dir)
+
+
 def read_api_key():
     """从 api.conf 中读取 API Key"""
-    current_dir = os.path.dirname(os.path.abspath(__file__))  # 获取当前目录
-    os.chdir(current_dir)
-
-    with open("api.conf", "r") as file:
+    with open("../api.conf", "r") as file:
         api_key = file.read().strip()
         print(f"API Key: {api_key}")
         return api_key
