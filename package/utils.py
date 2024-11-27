@@ -1,8 +1,10 @@
+import logging
+
 import matplotlib.pyplot as plt
-import torch
 import numpy as np
 import plotly.express as px
-import logging
+import torch
+
 
 # 设置日志
 logging.basicConfig(level=logging.INFO)
@@ -39,18 +41,20 @@ def plot_curve(x, y, curve_type):
     return fig
 
 
-def plot_confusion_matrix(cf,
-                          group_names=None,
-                          categories='auto',
-                          count=True,
-                          percent=True,
-                          cbar=True,
-                          xyticks=True,
-                          xyplotlabels=True,
-                          sum_stats=True,
-                          fig_size=None,
-                          cmap='Blues',
-                          title=None):
+def plot_confusion_matrix(
+        cf,
+        group_names=None,
+        categories='auto',
+        count=True,
+        percent=True,
+        cbar=True,
+        xyticks=True,
+        xyplotlabels=True,
+        sum_stats=True,
+        fig_size=None,
+        cmap='Blues',
+        title=None
+):
     """
     Plot a confusion matrix with additional summary statistics.
     """
@@ -82,7 +86,13 @@ def plot_confusion_matrix(cf,
         precision = cf[1, 1] / sum(cf[:, 1]) if len(cf) == 2 else None
         recall = cf[1, 1] / sum(cf[1, :]) if len(cf) == 2 else None
         f1_score = 2 * precision * recall / (precision + recall) if precision and recall else None
-        stats_text = f"\n\nAccuracy={accuracy:.4f}\nPrecision={precision:.4f}\nRecall={recall:.4f}\nF1 Score={f1_score:.4f}" if f1_score else f"\n\nAccuracy={accuracy:.4f}"
+        stats_text = (
+            f"\n\n"
+            f"Accuracy={accuracy:.4f}\n"
+            f"Precision={precision:.4f}\n"
+            f"Recall={recall:.4f}\n"
+            f"F1 Score={f1_score:.4f}"
+        ) if f1_score else f"\n\nAccuracy={accuracy:.4f}"
     else:
         stats_text = ""
 

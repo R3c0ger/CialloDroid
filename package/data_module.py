@@ -1,9 +1,10 @@
 from pathlib import Path
 from typing import List, Tuple, Union
+
 import dgl
 import torch
-from torch.utils.data import Dataset, DataLoader
 from sklearn.model_selection import StratifiedShuffleSplit
+from torch.utils.data import Dataset, DataLoader
 
 
 def stratified_split_dataset(
@@ -20,9 +21,7 @@ def stratified_split_dataset(
 
 
 class MalwareDataset(Dataset):
-    """
-    数据集类，用于加载处理后的图数据和标签。
-    """
+    """数据集类，用于加载处理后的图数据和标签。"""
 
     def __init__(self, graph_files: List[Path], consider_features: List[str]):
         """
@@ -36,9 +35,7 @@ class MalwareDataset(Dataset):
         return len(self.graph_files)
 
     def __getitem__(self, idx: int) -> Tuple[dgl.DGLGraph, torch.Tensor]:
-        """
-        返回单个图和其全局标签。
-        """
+        """返回单个图和其全局标签。"""
         graph_path = self.graph_files[idx]
         graphs, _ = dgl.data.utils.load_graphs(str(graph_path))
         graph = graphs[0]
@@ -86,6 +83,10 @@ class DataModule:
         self.split_train_val = split_train_val
         self.consider_features = consider_features
 
+        self.val_dataset = None
+        self.train_dataset = None
+        self.test_dataset = None
+
     def setup(self):
         train_files, train_labels = self._get_samples(self.train_dir)
         test_files, test_labels = self._get_samples(self.test_dir)
@@ -99,10 +100,9 @@ class DataModule:
         self.train_dataset = MalwareDataset(train_files, self.consider_features)
         self.test_dataset = MalwareDataset(test_files, self.consider_features)
 
-    def _get_samples(self, data_dir: Path) -> Tuple[List[Path], List[int]]:
-        """
-        从指定目录中加载样本文件路径和标签。
-        """
+    @staticmethod
+    def _get_samples(data_dir: Path) -> Tuple[List[Path], List[int]]:
+        """从指定目录中加载样本文件路径和标签"""
         graph_files = sorted(data_dir.glob("*.fcg"))
         if not graph_files:
             raise FileNotFoundError(f"No .fcg files found in directory: {data_dir}")
@@ -111,7 +111,6 @@ class DataModule:
             graphs, _ = dgl.data.utils.load_graphs(str(graph_file))
             labels.append(graphs[0].ndata["label"][0].item())  # 假设所有节点的标签相同
         return graph_files, labels
-
 
     def get_dataloader(self, dataset: Dataset, shuffle: bool = False) -> DataLoader:
         return DataLoader(
@@ -138,4 +137,3 @@ class DataModule:
 
     def test_dataloader(self) -> DataLoader:
         return self.get_dataloader(self.test_dataset, shuffle=False)
-

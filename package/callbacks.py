@@ -1,14 +1,13 @@
 import logging
-import os
 from typing import Tuple, List, Union
 
 import dgl
 import matplotlib.pyplot as plt
-import torch
 import numpy as np
+import torch
 
-from package.model import MalwareDetector
 from package.utils import plot_confusion_matrix, plot_curve
+
 
 # 配置日志
 logging.basicConfig(
@@ -27,7 +26,8 @@ class InputMonitor:
     def __init__(self):
         pass
 
-    def log_train_batch_start(self, batch: Tuple[dgl.DGLHeteroGraph, torch.Tensor], batch_idx: int):
+    @staticmethod
+    def log_train_batch_start(batch: Tuple[dgl.DGLHeteroGraph, torch.Tensor], batch_idx: int):
         """
         Logs histogram of labels for a training batch.
         :param batch: Tuple of graph data and labels.
@@ -98,7 +98,8 @@ class MetricsLogger:
         accuracy = correct / total
         return {'accuracy': accuracy}
 
-    def log_metrics(self, metrics: dict, stage: str):
+    @staticmethod
+    def log_metrics(metrics: dict, stage: str):
         """
         Logs computed metrics for a specific stage.
         :param metrics: Dictionary of metrics.
@@ -106,7 +107,8 @@ class MetricsLogger:
         """
         logger.info(f"{stage.capitalize()} Metrics: {metrics}")
 
-    def log_confusion_matrix(self, confusion_matrix: np.ndarray, stage: str):
+    @staticmethod
+    def log_confusion_matrix(confusion_matrix: np.ndarray, stage: str):
         """
         Logs and plots the confusion matrix.
         :param confusion_matrix: Confusion matrix as a NumPy array.
@@ -121,7 +123,8 @@ class MetricsLogger:
         plt.savefig(f"{stage}_confusion_matrix.png")
         logger.info(f"Saved {stage} confusion matrix as {stage}_confusion_matrix.png")
 
-    def log_roc_curve(self, roc_data: Tuple[np.ndarray, np.ndarray], stage: str):
+    @staticmethod
+    def log_roc_curve(roc_data: Tuple[np.ndarray, np.ndarray], stage: str):
         """
         Logs and plots the ROC curve.
         :param roc_data: Tuple of (FPR, TPR).
@@ -131,7 +134,8 @@ class MetricsLogger:
         plt.savefig(f"{stage}_roc_curve.png")
         logger.info(f"Saved {stage} ROC curve as {stage}_roc_curve.png")
 
-    def log_prc_curve(self, prc_data: Tuple[np.ndarray, np.ndarray], stage: str):
+    @staticmethod
+    def log_prc_curve(prc_data: Tuple[np.ndarray, np.ndarray], stage: str):
         """
         Logs and plots the Precision-Recall curve.
         :param prc_data: Tuple of (Precision, Recall).
