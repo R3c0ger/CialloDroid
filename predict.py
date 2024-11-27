@@ -40,6 +40,7 @@ def predict(graph_path, model, device):
     """加载图并进行预测"""
     graphs, _ = dgl.data.utils.load_graphs(str(graph_path))
     graph = graphs[0]
+    dgl_graph = graph
 
     # 合并多个特征为 'features'，确保特征与训练时一致
     feature_keys = ['api', 'user', 'external', 'entrypoint', 'native', 'public', 'static', 'codesize']
@@ -63,12 +64,12 @@ def predict(graph_path, model, device):
         output = model(graph)
         prob = torch.sigmoid(output).item()
 
-    return prob
+    return prob, dgl_graph
 
 
 def mal_detect(apk_path_str):
     apk_path = Path(apk_path_str)
-    processed_dir = Path("processed_temp")
+    processed_dir = Path("tmp/processed_fcg")
     processed_dir.mkdir(exist_ok=True)
 
     # 加载模型
@@ -78,7 +79,7 @@ def mal_detect(apk_path_str):
     graph_path = process_apk_file(apk_path, processed_dir)
 
     # 进行预测
-    prob = predict(graph_path, model, CONFIG["device"])
+    prob, dgl_graph = predict(graph_path, model, CONFIG["device"])
 
     # 打印预测结果
     if prob > 0.5:
@@ -86,7 +87,7 @@ def mal_detect(apk_path_str):
     else:
         print(f"The APK {apk_path} is predicted to be BENIGN with probability {prob:.4f}")
 
-    return prob
+    return prob, dgl_graph
 
 
 if __name__ == "__main__":
