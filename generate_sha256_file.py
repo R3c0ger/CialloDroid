@@ -1,6 +1,7 @@
 import os
 import hashlib
 
+
 # 文件夹路径
 data_dir = "./data"
 benign_dir = os.path.join(data_dir, "benign")
@@ -10,6 +11,7 @@ malicious_dir = os.path.join(data_dir, "malicious")
 benign_sha256_file = "./data/benign_data.sha256"
 malicious_sha256_file = "./data/malicious_data.sha256"
 
+
 def compute_sha256(file_path):
     """计算文件的 SHA256 值"""
     sha256_hash = hashlib.sha256()
@@ -17,6 +19,7 @@ def compute_sha256(file_path):
         for byte_block in iter(lambda: f.read(4096), b""):
             sha256_hash.update(byte_block)
     return sha256_hash.hexdigest()
+
 
 def process_directory(directory, output_file):
     """处理指定目录中的所有文件，生成 sha256 列表并保存"""
@@ -26,6 +29,7 @@ def process_directory(directory, output_file):
             if os.path.isfile(file_path):
                 sha256_hash = compute_sha256(file_path)
                 f.write(f"{sha256_hash}  {file_name}\n")
+
 
 # 生成 benign 和 malicious 数据的 SHA256 文件
 process_directory(benign_dir, benign_sha256_file)

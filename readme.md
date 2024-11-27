@@ -1,4 +1,73 @@
-2层卷积层结果
+<!--suppress ALL -->
+
+<div align="center">
+    <!--<img src="resources/logo/logo_256.png" alt="logo_256" style="height: 120px" /> -->
+	<h1 style="padding-bottom: .3em !important; border-bottom: 1.5px solid #d0d7deb3 !important;">CialloDroid</h1>
+</div>
+
+<h2 align="center" style="border-bottom-style: none !important;">Comprehensively Innovative Experiment of Information Security - Android Malware Detection Model Based on Graph Neural Network</h2>
+
+<p align="center" style="text-align:center">Ciallo ～(∠・ω< )⌒★</p>
+
+<p align="center" style="text-align:center">
+    <img src="https://img.shields.io/badge/version-v0.1.0-brightgreen" alt="version">
+    <img src="https://img.shields.io/badge/python-3.9+-yellow" alt="python">
+    <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="contributions">
+</p>
+
+<p  align="center" style="text-align:center">English | <a href="README_zh-CN.md">中文</a></p>
+
+## Task Description
+
+### Task Overview
+
+The Android operating system, as the most widely used open-source operating system on mobile devices, boasts a rich application market and a large user base. However, its popularity and rapid growth have also provided fertile ground for the development of malicious software.
+
+To address this issue, current researchers extract program features to implement mechanisms for detecting malicious software. However, these methods often **neglect program semantic information**, leading to suboptimal detection accuracy.
+
+Therefore, this project aims to target Android applications by **introducing graph convolutional neural networks (GCNs)**. The goal is to convert program semantic relationships into graph models and use graph analysis methods to achieve a high-precision and fast malicious software detection method.
+
+### Related Work
+
+Existing deep learning-based Android malware detection methods can primarily be categorized into **syntax-based feature** and **semantics-based feature** detection methods.
+
+Syntax-based methods focus on the syntactic structure of the code, extracting representative features and malicious behavior labels from the syntactic structure to train models for detection. The advantage of this method is that it can quickly and accurately identify simple and common malicious code. However, it performs relatively poorly in terms of accuracy and efficiency when dealing with complex and advanced malware.
+
+Semantics-based methods typically employ program analysis techniques. Program analysis is a technique that abstracts program behavior into mathematical models for further presentation and analysis. Compared to syntax-based methods, this approach can better identify complex and advanced malware and extract useful information from it. Through program analysis, researchers can better extract semantic information during the execution of malware to understand its behavior and characteristics, which are often expressed through graphs and data flow methods.
+
+### Feasible Methods
+
+A feasible approach for this system involves first performing static analysis on Android applications to extract function call graphs and automatically annotate these graphs using an existing [sensitive API dataset](https://apichecker.github.io/). Then, design a graph convolutional neural network (GCN) model and use One-Hot encoding to implement feature encoding for the function call graph, initializing the feature vectors for each node in the GCN model. Finally, train the model using existing datasets. 
+
+For static analysis of Android applications, tools such as [Androguard](https://github.com/androguard/androguard) can be used. Malicious Android applications can be downloaded from the [VirusShare](https://virusshare.com/) platform, while normal Android applications can be obtained from the [AndroZoo](https://androzoo.uni.lu/) platform.
+
+![architecture](img/architecture-en.svg)
+
+### Task Requirements
+
+1. Review relevant literature to understand the principles of malware detection.
+2. Design and implement a method for extracting function call graphs from Android applications and automatically annotating sensitive API calls.
+3. Design and implement a method for training an Android malware detection model based on a graph convolutional neural network (GCN).
+4. Design an experimental analysis method, requiring no fewer than 50 test samples for both malicious and normal applications, to evaluate the model's accuracy, recall rate, and F1 score.
+5. Based on group division of labor, write individual course reports to form a comprehensive project report.
+
+## Environment Setup
+
+- Python 3.9
+- androguard==3.4.0a1
+- dgl==2.4.0+cu121
+- matplotlib==3.9.2
+- networkx==3.2.1
+- numpy==2.1.3
+- plotly==5.24.1
+- pygtrie==2.5.0
+- Requests==2.32.3
+- scikit_learn==1.5.2
+- torch==2.4.0
+
+## Experiment Results
+
+### Results of 2 Convolutional Layers
 
 ```
 (yolov10) ubuntu@nwpu:~/ciallo$ python train_model.py 
@@ -96,7 +165,7 @@
 
 ```
 
-3层卷积层结果
+### Results of 3 Convolutional Layers
 
 ```
 (yolov10) ubuntu@nwpu:~/ciallo$ python train_model.py 
@@ -194,7 +263,7 @@
 
 ```
 
-4层卷积层
+### Results of 4 Convolutional Layers
 
 ```
 (yolov10) ubuntu@nwpu:~/ciallo$ python train_model.py 
@@ -289,23 +358,19 @@
 2024-11-25 19:57:06,717 - Validation Loss: 8.9151, Accuracy: 0.7561, Precision: 0.7187, Recall: 0.9367, F1 Score: 0.8133
 2024-11-25 19:57:06,751 - Epoch 20 Results: Train Loss = 65.9904, Train Acc = 0.7564, Val Loss = 8.9151, Val Acc = 0.7561, Precision = 0.7187, Recall = 0.9367, F1 = 0.8133
 2024-11-25 19:57:06,752 - Training complete. Best model saved at: checkpoints/best_model.pt
-
 ```
 
+### Shuffle to Prevent Overfitting
 
+- Shuffling can prevent model oscillation during training, which is beneficial for the robustness of the model:
+  When the training data is divided into two classes and the data is not shuffled, the model's parameters will first fit the first class of data. When a large amount of continuous data (from the first class) is input for training, it can cause the model to overfit on the first class of data. After the first class of data is learned, the model then starts to learn from a large amount of the second class of data, which causes the model to try to fit the second class of data, leading to new overfitting. This repeated training process causes the model to oscillate between the two overfitting states, resulting in model instability and hindering the convergence and rapid convergence of the training process.
 
-### shuffle防止过拟合
+- Shuffling can prevent overfitting and help the model learn more correct features:
+  Neural networks have strong learning capabilities. If the data is not shuffled, the model will repeatedly learn the features of the data in sequence, quickly reaching an overfitting state, and may only learn the sequential features of the data, lacking generalization ability. For example, if there are 100 data points with the first 50 being Class A and the remaining 50 being Class B, the model will quickly learn the 50th position as the boundary and that the first half is Class A and the second half is Class B. In this case, the model has not learned the true class features.
 
-Shuffle可以防止训练过程中的模型抖动，有利于模型的健壮性
-假设训练数据分为两类，在未经过Shuffle的训练时，首先模型的参数会去拟合第一类数据，当大量的连续数据（第一类）输入训练时，会造成模型在第一类数据上的过拟合。当第一类数据学习结束后模型又开始对大量的第二类数据进行学习，这样会使模型尽力去逼近第二类数据，造成新的过拟合现象。这样反复的训练模型会在两种过拟合之间徘徊，造成模型的抖动，也不利于模型的收敛和训练的快速收敛
-Shuffle可以防止过拟合，并且使得模型学到更加正确的特征
-NN网络的学习能力很强，如果数据未经过打乱，则模型反复依次序学习数据的特征，很快就会达到过拟合状态，并且有可能学会的只是数据的次序特征。模型的缺乏泛化能力。
-如：100条数据中前50条为A类剩余50条为B类，模型在很短的学习过程中就学会了50位分界点，且前半部分为A后半部分为B。则并没有学会真正的类别特征。
-3.为使得训练集，验证集，测试集中数据分布类似
+### Add Regularization
 
-### 加入正则化
-
-3层卷积层
+3 Convolutional Layers:
 
 ```
 (yolov10) ubuntu@nwpu:~/ciallo$ python train_model.py 
@@ -402,3 +467,12 @@ NN网络的学习能力很强，如果数据未经过打乱，则模型反复依
 2024-11-25 20:18:15,654 - Training complete. Best model saved at: checkpoints/best_model.pt
 ```
 
+## Acknowledgement
+
+- [Androguard](https://github.com/androguard/androguard)
+- [VirusShare](https://virusshare.com/)
+- [AndroZoo](https://androzoo.uni.lu/)
+
+## License
+
+This library is licensed under the Apache 2.0 License. See the [LICENSE](LICENSE) file for more details.

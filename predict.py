@@ -1,9 +1,11 @@
-import torch
-import dgl
 from pathlib import Path
+
+import dgl
+import torch
+
 from package.model import MalwareDetector
 from package.process_dataset import process_apk
-import torch.nn as nn
+
 
 # 配置参数和模型
 CONFIG = {
@@ -14,8 +16,9 @@ CONFIG = {
     "device": "cuda" if torch.cuda.is_available() else "cpu"
 }
 
-# 加载模型
+
 def load_model(config):
+    """加载模型"""
     model = MalwareDetector(
         input_dimension=config["input_dimension"],
         convolution_algorithm=config["convolution_algorithm"],
@@ -26,14 +29,16 @@ def load_model(config):
     model.eval()
     return model
 
-# 处理 APK 文件，生成调用图
+
 def process_apk_file(apk_path, processed_dir):
+    """处理 APK 文件，生成调用图"""
     process_apk(apk_path, processed_dir, label=-1)  # 使用 `label=-1`，仅用于预测，不需要具体标签
     graph_path = processed_dir / f"{apk_path.stem}.fcg"
     return graph_path
 
-# 加载图并进行预测
+
 def predict(graph_path, model, device):
+    """加载图并进行预测"""
     graphs, _ = dgl.data.utils.load_graphs(str(graph_path))
     graph = graphs[0]
 
@@ -61,7 +66,7 @@ def predict(graph_path, model, device):
 
     return prob
 
-# 主函数
+
 def main(apk_path_str):
     apk_path = Path(apk_path_str)
     processed_dir = Path("processed_temp")
@@ -82,12 +87,14 @@ def main(apk_path_str):
     else:
         print(f"The APK {apk_path} is predicted to be BENIGN with probability {prob:.4f}")
 
+
 if __name__ == "__main__":
     """
     使用示例：
     python predict.py data/benign/Benigh3135.apk
     """
     import argparse
+
     parser = argparse.ArgumentParser(description="Predict whether an APK file is malicious.")
     parser.add_argument("apk_path", type=str, help="Path to the APK file to be predicted.")
     args = parser.parse_args()
