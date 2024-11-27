@@ -1,4 +1,4 @@
-dgl==2.2.1
+dgl==2.1.0
 torch==2.3.0
 androguard==3.4.0a1
 numpy==1.23.0
