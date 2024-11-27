@@ -1,0 +1,412 @@
+nohup: ignoring input
+2024-11-27 18:32:01,465 - Initializing data module...
+2024-11-27 18:32:09,687 - Dataset Statistics:
+2024-11-27 18:32:09,688 -   Total Samples: 5297
+2024-11-27 18:32:09,688 -   Training Samples: 4237, Validation Samples: 529, Test Samples: 531
+2024-11-27 18:32:09,688 - Dataset Statistics:
+2024-11-27 18:32:09,688 -   Total Samples: 5297
+2024-11-27 18:32:09,688 -   Training Samples: 4237, Validation Samples: 529, Test Samples: 531
+2024-11-27 18:32:20,860 -   Training Set - Benign: 1830, Malicious: 2407
+2024-11-27 18:32:20,860 - Initializing model...
+2024-11-27 18:32:23,148 - Starting training...
+2024-11-27 18:32:23,148 - Epoch 1/100
+2024-11-27 18:32:41,386 - Train Loss: 89.9830, Accuracy: 0.5742, Time: 18.24s
+2024-11-27 18:32:43,934 - Validation Loss: 11.4124, Accuracy: 0.5690, Precision: 0.5741, Recall: 0.9300, F1 Score: 0.7099
+2024-11-27 18:32:43,967 - Epoch 1 Results: Train Loss = 89.9830, Train Acc = 0.5742, Val Loss = 11.4124, Val Acc = 0.5690, Precision = 0.5741, Recall = 0.9300, F1 = 0.7099
+2024-11-27 18:32:43,967 - Epoch 2/100
+2024-11-27 18:32:57,774 - Train Loss: 88.1948, Accuracy: 0.5943, Time: 13.81s
+2024-11-27 18:33:00,355 - Validation Loss: 11.2115, Accuracy: 0.5690, Precision: 0.5729, Recall: 0.9433, F1 Score: 0.7128
+2024-11-27 18:33:00,387 - Epoch 2 Results: Train Loss = 88.1948, Train Acc = 0.5943, Val Loss = 11.2115, Val Acc = 0.5690, Precision = 0.5729, Recall = 0.9433, F1 = 0.7128
+2024-11-27 18:33:00,387 - Epoch 3/100
+2024-11-27 18:33:13,875 - Train Loss: 86.8226, Accuracy: 0.6158, Time: 13.49s
+2024-11-27 18:33:16,399 - Validation Loss: 10.9862, Accuracy: 0.6106, Precision: 0.6103, Recall: 0.8667, F1 Score: 0.7163
+2024-11-27 18:33:16,459 - Epoch 3 Results: Train Loss = 86.8226, Train Acc = 0.6158, Val Loss = 10.9862, Val Acc = 0.6106, Precision = 0.6103, Recall = 0.8667, F1 = 0.7163
+2024-11-27 18:33:16,459 - Epoch 4/100
+2024-11-27 18:33:30,400 - Train Loss: 85.1656, Accuracy: 0.6394, Time: 13.94s
+2024-11-27 18:33:32,909 - Validation Loss: 10.7972, Accuracy: 0.6427, Precision: 0.6357, Recall: 0.8667, F1 Score: 0.7334
+2024-11-27 18:33:32,942 - Epoch 4 Results: Train Loss = 85.1656, Train Acc = 0.6394, Val Loss = 10.7972, Val Acc = 0.6427, Precision = 0.6357, Recall = 0.8667, F1 = 0.7334
+2024-11-27 18:33:32,942 - Epoch 5/100
+2024-11-27 18:33:46,599 - Train Loss: 82.8050, Accuracy: 0.6703, Time: 13.66s
+2024-11-27 18:33:49,243 - Validation Loss: 10.4814, Accuracy: 0.7051, Precision: 0.7432, Recall: 0.7333, F1 Score: 0.7383
+2024-11-27 18:33:49,275 - Epoch 5 Results: Train Loss = 82.8050, Train Acc = 0.6703, Val Loss = 10.4814, Val Acc = 0.7051, Precision = 0.7432, Recall = 0.7333, F1 = 0.7383
+2024-11-27 18:33:49,276 - Epoch 6/100
+2024-11-27 18:34:02,894 - Train Loss: 81.9009, Accuracy: 0.6601, Time: 13.62s
+2024-11-27 18:34:05,591 - Validation Loss: 10.2808, Accuracy: 0.7070, Precision: 0.7077, Recall: 0.8233, F1 Score: 0.7612
+2024-11-27 18:34:05,620 - Epoch 6 Results: Train Loss = 81.9009, Train Acc = 0.6601, Val Loss = 10.2808, Val Acc = 0.7070, Precision = 0.7077, Recall = 0.8233, F1 = 0.7612
+2024-11-27 18:34:05,620 - Epoch 7/100
+2024-11-27 18:34:19,364 - Train Loss: 79.3205, Accuracy: 0.6988, Time: 13.74s
+2024-11-27 18:34:21,950 - Validation Loss: 10.2607, Accuracy: 0.7505, Precision: 0.8500, Recall: 0.6800, F1 Score: 0.7556
+2024-11-27 18:34:21,985 - Epoch 7 Results: Train Loss = 79.3205, Train Acc = 0.6988, Val Loss = 10.2607, Val Acc = 0.7505, Precision = 0.8500, Recall = 0.6800, F1 = 0.7556
+2024-11-27 18:34:21,985 - Epoch 8/100
+2024-11-27 18:34:35,649 - Train Loss: 77.8770, Accuracy: 0.7005, Time: 13.66s
+2024-11-27 18:34:38,171 - Validation Loss: 9.8400, Accuracy: 0.7240, Precision: 0.7692, Recall: 0.7333, F1 Score: 0.7509
+2024-11-27 18:34:38,203 - Epoch 8 Results: Train Loss = 77.8770, Train Acc = 0.7005, Val Loss = 9.8400, Val Acc = 0.7240, Precision = 0.7692, Recall = 0.7333, F1 = 0.7509
+2024-11-27 18:34:38,203 - Epoch 9/100
+2024-11-27 18:34:51,959 - Train Loss: 76.2716, Accuracy: 0.7057, Time: 13.76s
+2024-11-27 18:34:54,543 - Validation Loss: 9.8213, Accuracy: 0.7580, Precision: 0.8675, Recall: 0.6767, F1 Score: 0.7603
+2024-11-27 18:34:54,576 - Epoch 9 Results: Train Loss = 76.2716, Train Acc = 0.7057, Val Loss = 9.8213, Val Acc = 0.7580, Precision = 0.8675, Recall = 0.6767, F1 = 0.7603
+2024-11-27 18:34:54,576 - Epoch 10/100
+2024-11-27 18:35:08,454 - Train Loss: 74.7808, Accuracy: 0.7246, Time: 13.88s
+2024-11-27 18:35:11,005 - Validation Loss: 9.5505, Accuracy: 0.7259, Precision: 0.7663, Recall: 0.7433, F1 Score: 0.7547
+2024-11-27 18:35:11,038 - Epoch 10 Results: Train Loss = 74.7808, Train Acc = 0.7246, Val Loss = 9.5505, Val Acc = 0.7259, Precision = 0.7663, Recall = 0.7433, F1 = 0.7547
+2024-11-27 18:35:11,038 - Epoch 11/100
+2024-11-27 18:35:25,320 - Train Loss: 73.5456, Accuracy: 0.7269, Time: 14.28s
+2024-11-27 18:35:27,893 - Validation Loss: 9.2073, Accuracy: 0.7561, Precision: 0.7680, Recall: 0.8167, F1 Score: 0.7916
+2024-11-27 18:35:27,925 - Epoch 11 Results: Train Loss = 73.5456, Train Acc = 0.7269, Val Loss = 9.2073, Val Acc = 0.7561, Precision = 0.7680, Recall = 0.8167, F1 = 0.7916
+2024-11-27 18:35:27,926 - Epoch 12/100
+2024-11-27 18:35:41,762 - Train Loss: 71.6256, Accuracy: 0.7366, Time: 13.84s
+2024-11-27 18:35:44,314 - Validation Loss: 9.1094, Accuracy: 0.7524, Precision: 0.8051, Recall: 0.7433, F1 Score: 0.7730
+2024-11-27 18:35:44,347 - Epoch 12 Results: Train Loss = 71.6256, Train Acc = 0.7366, Val Loss = 9.1094, Val Acc = 0.7524, Precision = 0.8051, Recall = 0.7433, F1 = 0.7730
+2024-11-27 18:35:44,347 - Epoch 13/100
+2024-11-27 18:35:58,195 - Train Loss: 69.7109, Accuracy: 0.7569, Time: 13.85s
+2024-11-27 18:36:00,737 - Validation Loss: 8.8770, Accuracy: 0.7618, Precision: 0.7753, Recall: 0.8167, F1 Score: 0.7955
+2024-11-27 18:36:00,770 - Epoch 13 Results: Train Loss = 69.7109, Train Acc = 0.7569, Val Loss = 8.8770, Val Acc = 0.7618, Precision = 0.7753, Recall = 0.8167, F1 = 0.7955
+2024-11-27 18:36:00,770 - Epoch 14/100
+2024-11-27 18:36:14,763 - Train Loss: 69.1955, Accuracy: 0.7534, Time: 13.99s
+2024-11-27 18:36:17,301 - Validation Loss: 8.8824, Accuracy: 0.7769, Precision: 0.8611, Recall: 0.7233, F1 Score: 0.7862
+2024-11-27 18:36:17,331 - Epoch 14 Results: Train Loss = 69.1955, Train Acc = 0.7534, Val Loss = 8.8824, Val Acc = 0.7769, Precision = 0.8611, Recall = 0.7233, F1 = 0.7862
+2024-11-27 18:36:17,331 - Epoch 15/100
+2024-11-27 18:36:31,109 - Train Loss: 68.7629, Accuracy: 0.7536, Time: 13.78s
+2024-11-27 18:36:33,686 - Validation Loss: 8.7201, Accuracy: 0.7448, Precision: 0.7895, Recall: 0.7500, F1 Score: 0.7692
+2024-11-27 18:36:33,718 - Epoch 15 Results: Train Loss = 68.7629, Train Acc = 0.7536, Val Loss = 8.7201, Val Acc = 0.7448, Precision = 0.7895, Recall = 0.7500, F1 = 0.7692
+2024-11-27 18:36:33,718 - Epoch 16/100
+2024-11-27 18:36:47,745 - Train Loss: 67.3476, Accuracy: 0.7597, Time: 14.03s
+2024-11-27 18:36:50,245 - Validation Loss: 8.7645, Accuracy: 0.7353, Precision: 0.7286, Recall: 0.8500, F1 Score: 0.7846
+2024-11-27 18:36:50,274 - Epoch 16 Results: Train Loss = 67.3476, Train Acc = 0.7597, Val Loss = 8.7645, Val Acc = 0.7353, Precision = 0.7286, Recall = 0.8500, F1 = 0.7846
+2024-11-27 18:36:50,275 - Epoch 17/100
+2024-11-27 18:37:04,329 - Train Loss: 66.1186, Accuracy: 0.7680, Time: 14.05s
+2024-11-27 18:37:06,935 - Validation Loss: 9.0206, Accuracy: 0.7240, Precision: 0.6995, Recall: 0.9000, F1 Score: 0.7872
+2024-11-27 18:37:06,968 - Epoch 17 Results: Train Loss = 66.1186, Train Acc = 0.7680, Val Loss = 9.0206, Val Acc = 0.7240, Precision = 0.6995, Recall = 0.9000, F1 = 0.7872
+2024-11-27 18:37:06,968 - Epoch 18/100
+2024-11-27 18:37:20,713 - Train Loss: 65.9039, Accuracy: 0.7685, Time: 13.74s
+2024-11-27 18:37:23,232 - Validation Loss: 8.5368, Accuracy: 0.7599, Precision: 0.7645, Recall: 0.8333, F1 Score: 0.7974
+2024-11-27 18:37:23,264 - Epoch 18 Results: Train Loss = 65.9039, Train Acc = 0.7685, Val Loss = 8.5368, Val Acc = 0.7599, Precision = 0.7645, Recall = 0.8333, F1 = 0.7974
+2024-11-27 18:37:23,264 - Epoch 19/100
+2024-11-27 18:37:36,985 - Train Loss: 64.7266, Accuracy: 0.7789, Time: 13.72s
+2024-11-27 18:37:39,541 - Validation Loss: 8.3024, Accuracy: 0.7807, Precision: 0.8485, Recall: 0.7467, F1 Score: 0.7943
+2024-11-27 18:37:39,573 - Epoch 19 Results: Train Loss = 64.7266, Train Acc = 0.7789, Val Loss = 8.3024, Val Acc = 0.7807, Precision = 0.8485, Recall = 0.7467, F1 = 0.7943
+2024-11-27 18:37:39,573 - Epoch 20/100
+2024-11-27 18:37:53,864 - Train Loss: 62.2703, Accuracy: 0.7947, Time: 14.29s
+2024-11-27 18:37:56,428 - Validation Loss: 8.1444, Accuracy: 0.7788, Precision: 0.7923, Recall: 0.8267, F1 Score: 0.8091
+2024-11-27 18:37:56,462 - Epoch 20 Results: Train Loss = 62.2703, Train Acc = 0.7947, Val Loss = 8.1444, Val Acc = 0.7788, Precision = 0.7923, Recall = 0.8267, F1 = 0.8091
+2024-11-27 18:37:56,462 - Epoch 21/100
+2024-11-27 18:38:10,291 - Train Loss: 63.4339, Accuracy: 0.7800, Time: 13.83s
+2024-11-27 18:38:12,795 - Validation Loss: 8.0631, Accuracy: 0.7845, Precision: 0.8394, Recall: 0.7667, F1 Score: 0.8014
+2024-11-27 18:38:12,827 - Epoch 21 Results: Train Loss = 63.4339, Train Acc = 0.7800, Val Loss = 8.0631, Val Acc = 0.7845, Precision = 0.8394, Recall = 0.7667, F1 = 0.8014
+2024-11-27 18:38:12,827 - Epoch 22/100
+2024-11-27 18:38:26,573 - Train Loss: 61.5226, Accuracy: 0.7916, Time: 13.75s
+2024-11-27 18:38:29,104 - Validation Loss: 8.3000, Accuracy: 0.7750, Precision: 0.8952, Recall: 0.6833, F1 Score: 0.7750
+2024-11-27 18:38:29,135 - Epoch 22 Results: Train Loss = 61.5226, Train Acc = 0.7916, Val Loss = 8.3000, Val Acc = 0.7750, Precision = 0.8952, Recall = 0.6833, F1 = 0.7750
+2024-11-27 18:38:29,135 - Epoch 23/100
+2024-11-27 18:38:42,974 - Train Loss: 62.3305, Accuracy: 0.7803, Time: 13.84s
+2024-11-27 18:38:45,502 - Validation Loss: 7.9112, Accuracy: 0.7921, Precision: 0.8467, Recall: 0.7733, F1 Score: 0.8084
+2024-11-27 18:38:45,534 - Epoch 23 Results: Train Loss = 62.3305, Train Acc = 0.7803, Val Loss = 7.9112, Val Acc = 0.7921, Precision = 0.8467, Recall = 0.7733, F1 = 0.8084
+2024-11-27 18:38:45,534 - Epoch 24/100
+2024-11-27 18:38:59,354 - Train Loss: 60.3201, Accuracy: 0.7987, Time: 13.82s
+2024-11-27 18:39:01,975 - Validation Loss: 7.9982, Accuracy: 0.7750, Precision: 0.7837, Recall: 0.8333, F1 Score: 0.8078
+2024-11-27 18:39:02,006 - Epoch 24 Results: Train Loss = 60.3201, Train Acc = 0.7987, Val Loss = 7.9982, Val Acc = 0.7750, Precision = 0.7837, Recall = 0.8333, F1 = 0.8078
+2024-11-27 18:39:02,006 - Epoch 25/100
+2024-11-27 18:39:15,944 - Train Loss: 60.9950, Accuracy: 0.7885, Time: 13.94s
+2024-11-27 18:39:18,458 - Validation Loss: 8.0974, Accuracy: 0.7883, Precision: 0.9052, Recall: 0.7000, F1 Score: 0.7895
+2024-11-27 18:39:18,488 - Epoch 25 Results: Train Loss = 60.9950, Train Acc = 0.7885, Val Loss = 8.0974, Val Acc = 0.7883, Precision = 0.9052, Recall = 0.7000, F1 = 0.7895
+2024-11-27 18:39:18,488 - Epoch 26/100
+2024-11-27 18:39:32,356 - Train Loss: 58.3878, Accuracy: 0.8029, Time: 13.87s
+2024-11-27 18:39:34,892 - Validation Loss: 7.6642, Accuracy: 0.8015, Precision: 0.8764, Recall: 0.7567, F1 Score: 0.8122
+2024-11-27 18:39:34,924 - Epoch 26 Results: Train Loss = 58.3878, Train Acc = 0.8029, Val Loss = 7.6642, Val Acc = 0.8015, Precision = 0.8764, Recall = 0.7567, F1 = 0.8122
+2024-11-27 18:39:34,924 - Epoch 27/100
+2024-11-27 18:39:48,771 - Train Loss: 57.9198, Accuracy: 0.8124, Time: 13.85s
+2024-11-27 18:39:51,296 - Validation Loss: 7.5788, Accuracy: 0.8015, Precision: 0.8283, Recall: 0.8200, F1 Score: 0.8241
+2024-11-27 18:39:51,329 - Epoch 27 Results: Train Loss = 57.9198, Train Acc = 0.8124, Val Loss = 7.5788, Val Acc = 0.8015, Precision = 0.8283, Recall = 0.8200, F1 = 0.8241
+2024-11-27 18:39:51,329 - Epoch 28/100
+2024-11-27 18:40:05,310 - Train Loss: 58.2733, Accuracy: 0.7989, Time: 13.98s
+2024-11-27 18:40:07,810 - Validation Loss: 7.5878, Accuracy: 0.7996, Precision: 0.8255, Recall: 0.8200, F1 Score: 0.8227
+2024-11-27 18:40:07,841 - Epoch 28 Results: Train Loss = 58.2733, Train Acc = 0.7989, Val Loss = 7.5878, Val Acc = 0.7996, Precision = 0.8255, Recall = 0.8200, F1 = 0.8227
+2024-11-27 18:40:07,842 - Epoch 29/100
+2024-11-27 18:40:21,654 - Train Loss: 57.1433, Accuracy: 0.8067, Time: 13.81s
+2024-11-27 18:40:24,295 - Validation Loss: 7.9994, Accuracy: 0.7732, Precision: 0.7473, Recall: 0.9067, F1 Score: 0.8193
+2024-11-27 18:40:24,327 - Epoch 29 Results: Train Loss = 57.1433, Train Acc = 0.8067, Val Loss = 7.9994, Val Acc = 0.7732, Precision = 0.7473, Recall = 0.9067, F1 = 0.8193
+2024-11-27 18:40:24,327 - Epoch 30/100
+2024-11-27 18:40:37,894 - Train Loss: 56.2323, Accuracy: 0.8202, Time: 13.57s
+2024-11-27 18:40:40,462 - Validation Loss: 7.5190, Accuracy: 0.8223, Precision: 0.9328, Recall: 0.7400, F1 Score: 0.8253
+2024-11-27 18:40:40,494 - Epoch 30 Results: Train Loss = 56.2323, Train Acc = 0.8202, Val Loss = 7.5190, Val Acc = 0.8223, Precision = 0.9328, Recall = 0.7400, F1 = 0.8253
+2024-11-27 18:40:40,495 - Epoch 31/100
+2024-11-27 18:40:54,457 - Train Loss: 55.3640, Accuracy: 0.8249, Time: 13.96s
+2024-11-27 18:40:57,093 - Validation Loss: 7.3660, Accuracy: 0.8147, Precision: 0.8279, Recall: 0.8500, F1 Score: 0.8388
+2024-11-27 18:40:57,126 - Epoch 31 Results: Train Loss = 55.3640, Train Acc = 0.8249, Val Loss = 7.3660, Val Acc = 0.8147, Precision = 0.8279, Recall = 0.8500, F1 = 0.8388
+2024-11-27 18:40:57,126 - Epoch 32/100
+2024-11-27 18:41:10,995 - Train Loss: 54.5818, Accuracy: 0.8282, Time: 13.87s
+2024-11-27 18:41:13,611 - Validation Loss: 7.6280, Accuracy: 0.7996, Precision: 0.7803, Recall: 0.9000, F1 Score: 0.8359
+2024-11-27 18:41:13,642 - Epoch 32 Results: Train Loss = 54.5818, Train Acc = 0.8282, Val Loss = 7.6280, Val Acc = 0.7996, Precision = 0.7803, Recall = 0.9000, F1 = 0.8359
+2024-11-27 18:41:13,642 - Epoch 33/100
+2024-11-27 18:41:27,666 - Train Loss: 54.8442, Accuracy: 0.8185, Time: 14.02s
+2024-11-27 18:41:30,221 - Validation Loss: 7.3955, Accuracy: 0.8242, Precision: 0.8053, Recall: 0.9100, F1 Score: 0.8545
+2024-11-27 18:41:30,254 - Epoch 33 Results: Train Loss = 54.8442, Train Acc = 0.8185, Val Loss = 7.3955, Val Acc = 0.8242, Precision = 0.8053, Recall = 0.9100, F1 = 0.8545
+2024-11-27 18:41:30,254 - Epoch 34/100
+2024-11-27 18:41:44,082 - Train Loss: 54.3350, Accuracy: 0.8320, Time: 13.83s
+2024-11-27 18:41:46,650 - Validation Loss: 7.1243, Accuracy: 0.8412, Precision: 0.8803, Recall: 0.8333, F1 Score: 0.8562
+2024-11-27 18:41:46,682 - Epoch 34 Results: Train Loss = 54.3350, Train Acc = 0.8320, Val Loss = 7.1243, Val Acc = 0.8412, Precision = 0.8803, Recall = 0.8333, F1 = 0.8562
+2024-11-27 18:41:46,682 - Epoch 35/100
+2024-11-27 18:42:00,279 - Train Loss: 53.0096, Accuracy: 0.8355, Time: 13.60s
+2024-11-27 18:42:02,806 - Validation Loss: 7.0464, Accuracy: 0.8355, Precision: 0.8817, Recall: 0.8200, F1 Score: 0.8497
+2024-11-27 18:42:02,838 - Epoch 35 Results: Train Loss = 53.0096, Train Acc = 0.8355, Val Loss = 7.0464, Val Acc = 0.8355, Precision = 0.8817, Recall = 0.8200, F1 = 0.8497
+2024-11-27 18:42:02,838 - Epoch 36/100
+2024-11-27 18:42:16,639 - Train Loss: 53.7143, Accuracy: 0.8220, Time: 13.80s
+2024-11-27 18:42:19,241 - Validation Loss: 7.2472, Accuracy: 0.8091, Precision: 0.8100, Recall: 0.8667, F1 Score: 0.8374
+2024-11-27 18:42:19,272 - Epoch 36 Results: Train Loss = 53.7143, Train Acc = 0.8220, Val Loss = 7.2472, Val Acc = 0.8091, Precision = 0.8100, Recall = 0.8667, F1 = 0.8374
+2024-11-27 18:42:19,272 - Epoch 37/100
+2024-11-27 18:42:33,306 - Train Loss: 52.0651, Accuracy: 0.8428, Time: 14.03s
+2024-11-27 18:42:35,870 - Validation Loss: 7.2814, Accuracy: 0.8166, Precision: 0.7812, Recall: 0.9400, F1 Score: 0.8533
+2024-11-27 18:42:35,902 - Epoch 37 Results: Train Loss = 52.0651, Train Acc = 0.8428, Val Loss = 7.2814, Val Acc = 0.8166, Precision = 0.7812, Recall = 0.9400, F1 = 0.8533
+2024-11-27 18:42:35,902 - Epoch 38/100
+2024-11-27 18:42:49,648 - Train Loss: 52.3568, Accuracy: 0.8357, Time: 13.75s
+2024-11-27 18:42:52,195 - Validation Loss: 7.0090, Accuracy: 0.8223, Precision: 0.8411, Recall: 0.8467, F1 Score: 0.8439
+2024-11-27 18:42:52,227 - Epoch 38 Results: Train Loss = 52.3568, Train Acc = 0.8357, Val Loss = 7.0090, Val Acc = 0.8223, Precision = 0.8411, Recall = 0.8467, F1 = 0.8439
+2024-11-27 18:42:52,228 - Epoch 39/100
+2024-11-27 18:43:05,986 - Train Loss: 52.0152, Accuracy: 0.8400, Time: 13.76s
+2024-11-27 18:43:08,539 - Validation Loss: 6.9069, Accuracy: 0.8488, Precision: 0.9135, Recall: 0.8100, F1 Score: 0.8587
+2024-11-27 18:43:08,571 - Epoch 39 Results: Train Loss = 52.0152, Train Acc = 0.8400, Val Loss = 6.9069, Val Acc = 0.8488, Precision = 0.9135, Recall = 0.8100, F1 = 0.8587
+2024-11-27 18:43:08,571 - Epoch 40/100
+2024-11-27 18:43:22,592 - Train Loss: 52.1615, Accuracy: 0.8367, Time: 14.02s
+2024-11-27 18:43:25,277 - Validation Loss: 6.9750, Accuracy: 0.8299, Precision: 0.8387, Recall: 0.8667, F1 Score: 0.8525
+2024-11-27 18:43:25,308 - Epoch 40 Results: Train Loss = 52.1615, Train Acc = 0.8367, Val Loss = 6.9750, Val Acc = 0.8299, Precision = 0.8387, Recall = 0.8667, F1 = 0.8525
+2024-11-27 18:43:25,309 - Epoch 41/100
+2024-11-27 18:43:40,892 - Train Loss: 54.1956, Accuracy: 0.8157, Time: 15.58s
+2024-11-27 18:43:43,576 - Validation Loss: 6.8789, Accuracy: 0.8488, Precision: 0.8901, Recall: 0.8367, F1 Score: 0.8625
+2024-11-27 18:43:43,605 - Epoch 41 Results: Train Loss = 54.1956, Train Acc = 0.8157, Val Loss = 6.8789, Val Acc = 0.8488, Precision = 0.8901, Recall = 0.8367, F1 = 0.8625
+2024-11-27 18:43:43,605 - Epoch 42/100
+2024-11-27 18:43:58,259 - Train Loss: 50.2957, Accuracy: 0.8523, Time: 14.65s
+2024-11-27 18:44:01,063 - Validation Loss: 7.0045, Accuracy: 0.8355, Precision: 0.8257, Recall: 0.9000, F1 Score: 0.8612
+2024-11-27 18:44:01,095 - Epoch 42 Results: Train Loss = 50.2957, Train Acc = 0.8523, Val Loss = 7.0045, Val Acc = 0.8355, Precision = 0.8257, Recall = 0.9000, F1 = 0.8612
+2024-11-27 18:44:01,095 - Epoch 43/100
+2024-11-27 18:44:15,592 - Train Loss: 51.7192, Accuracy: 0.8322, Time: 14.50s
+2024-11-27 18:44:18,222 - Validation Loss: 6.8265, Accuracy: 0.8526, Precision: 0.9269, Recall: 0.8033, F1 Score: 0.8607
+2024-11-27 18:44:18,255 - Epoch 43 Results: Train Loss = 51.7192, Train Acc = 0.8322, Val Loss = 6.8265, Val Acc = 0.8526, Precision = 0.9269, Recall = 0.8033, F1 = 0.8607
+2024-11-27 18:44:18,255 - Epoch 44/100
+2024-11-27 18:44:32,940 - Train Loss: 51.7099, Accuracy: 0.8261, Time: 14.68s
+2024-11-27 18:44:35,538 - Validation Loss: 6.7145, Accuracy: 0.8507, Precision: 0.9048, Recall: 0.8233, F1 Score: 0.8621
+2024-11-27 18:44:35,573 - Epoch 44 Results: Train Loss = 51.7099, Train Acc = 0.8261, Val Loss = 6.7145, Val Acc = 0.8507, Precision = 0.9048, Recall = 0.8233, F1 = 0.8621
+2024-11-27 18:44:35,573 - Epoch 45/100
+2024-11-27 18:44:49,669 - Train Loss: 49.8026, Accuracy: 0.8480, Time: 14.10s
+2024-11-27 18:44:52,301 - Validation Loss: 7.0951, Accuracy: 0.8204, Precision: 0.7971, Recall: 0.9167, F1 Score: 0.8527
+2024-11-27 18:44:52,334 - Epoch 45 Results: Train Loss = 49.8026, Train Acc = 0.8480, Val Loss = 7.0951, Val Acc = 0.8204, Precision = 0.7971, Recall = 0.9167, F1 = 0.8527
+2024-11-27 18:44:52,334 - Epoch 46/100
+2024-11-27 18:45:07,977 - Train Loss: 50.0968, Accuracy: 0.8442, Time: 15.64s
+2024-11-27 18:45:10,598 - Validation Loss: 6.6111, Accuracy: 0.8488, Precision: 0.8873, Recall: 0.8400, F1 Score: 0.8630
+2024-11-27 18:45:10,632 - Epoch 46 Results: Train Loss = 50.0968, Train Acc = 0.8442, Val Loss = 6.6111, Val Acc = 0.8488, Precision = 0.8873, Recall = 0.8400, F1 = 0.8630
+2024-11-27 18:45:10,632 - Epoch 47/100
+2024-11-27 18:45:25,760 - Train Loss: 49.6471, Accuracy: 0.8461, Time: 15.13s
+2024-11-27 18:45:28,403 - Validation Loss: 6.6009, Accuracy: 0.8526, Precision: 0.8750, Recall: 0.8633, F1 Score: 0.8691
+2024-11-27 18:45:28,438 - Epoch 47 Results: Train Loss = 49.6471, Train Acc = 0.8461, Val Loss = 6.6009, Val Acc = 0.8526, Precision = 0.8750, Recall = 0.8633, F1 = 0.8691
+2024-11-27 18:45:28,438 - Epoch 48/100
+2024-11-27 18:45:43,744 - Train Loss: 50.5747, Accuracy: 0.8381, Time: 15.31s
+2024-11-27 18:45:46,445 - Validation Loss: 6.6135, Accuracy: 0.8526, Precision: 0.9111, Recall: 0.8200, F1 Score: 0.8632
+2024-11-27 18:45:46,479 - Epoch 48 Results: Train Loss = 50.5747, Train Acc = 0.8381, Val Loss = 6.6135, Val Acc = 0.8526, Precision = 0.9111, Recall = 0.8200, F1 = 0.8632
+2024-11-27 18:45:46,479 - Epoch 49/100
+2024-11-27 18:46:00,803 - Train Loss: 50.0930, Accuracy: 0.8371, Time: 14.32s
+2024-11-27 18:46:03,520 - Validation Loss: 6.5694, Accuracy: 0.8658, Precision: 0.9018, Recall: 0.8567, F1 Score: 0.8786
+2024-11-27 18:46:03,558 - Epoch 49 Results: Train Loss = 50.0930, Train Acc = 0.8371, Val Loss = 6.5694, Val Acc = 0.8658, Precision = 0.9018, Recall = 0.8567, F1 = 0.8786
+2024-11-27 18:46:03,558 - Epoch 50/100
+2024-11-27 18:46:17,508 - Train Loss: 48.2742, Accuracy: 0.8582, Time: 13.95s
+2024-11-27 18:46:20,172 - Validation Loss: 6.5205, Accuracy: 0.8582, Precision: 0.9182, Recall: 0.8233, F1 Score: 0.8682
+2024-11-27 18:46:20,219 - Epoch 50 Results: Train Loss = 48.2742, Train Acc = 0.8582, Val Loss = 6.5205, Val Acc = 0.8582, Precision = 0.9182, Recall = 0.8233, F1 = 0.8682
+2024-11-27 18:46:20,220 - Epoch 51/100
+2024-11-27 18:46:35,158 - Train Loss: 48.3204, Accuracy: 0.8541, Time: 14.94s
+2024-11-27 18:46:37,800 - Validation Loss: 6.5359, Accuracy: 0.8544, Precision: 0.9084, Recall: 0.8267, F1 Score: 0.8656
+2024-11-27 18:46:37,835 - Epoch 51 Results: Train Loss = 48.3204, Train Acc = 0.8541, Val Loss = 6.5359, Val Acc = 0.8544, Precision = 0.9084, Recall = 0.8267, F1 = 0.8656
+2024-11-27 18:46:37,835 - Epoch 52/100
+2024-11-27 18:46:52,795 - Train Loss: 47.6868, Accuracy: 0.8572, Time: 14.96s
+2024-11-27 18:46:55,645 - Validation Loss: 6.3878, Accuracy: 0.8658, Precision: 0.8935, Recall: 0.8667, F1 Score: 0.8799
+2024-11-27 18:46:55,679 - Epoch 52 Results: Train Loss = 47.6868, Train Acc = 0.8572, Val Loss = 6.3878, Val Acc = 0.8658, Precision = 0.8935, Recall = 0.8667, F1 = 0.8799
+2024-11-27 18:46:55,679 - Epoch 53/100
+2024-11-27 18:47:11,221 - Train Loss: 47.6516, Accuracy: 0.8596, Time: 15.54s
+2024-11-27 18:47:13,811 - Validation Loss: 6.9032, Accuracy: 0.8091, Precision: 0.7696, Recall: 0.9467, F1 Score: 0.8490
+2024-11-27 18:47:13,845 - Epoch 53 Results: Train Loss = 47.6516, Train Acc = 0.8596, Val Loss = 6.9032, Val Acc = 0.8091, Precision = 0.7696, Recall = 0.9467, F1 = 0.8490
+2024-11-27 18:47:13,845 - Epoch 54/100
+2024-11-27 18:47:29,298 - Train Loss: 47.7234, Accuracy: 0.8468, Time: 15.45s
+2024-11-27 18:47:32,074 - Validation Loss: 7.4519, Accuracy: 0.7675, Precision: 0.7218, Recall: 0.9600, F1 Score: 0.8240
+2024-11-27 18:47:32,106 - Epoch 54 Results: Train Loss = 47.7234, Train Acc = 0.8468, Val Loss = 7.4519, Val Acc = 0.7675, Precision = 0.7218, Recall = 0.9600, F1 = 0.8240
+2024-11-27 18:47:32,106 - Epoch 55/100
+2024-11-27 18:47:46,578 - Train Loss: 47.3340, Accuracy: 0.8572, Time: 14.47s
+2024-11-27 18:47:49,501 - Validation Loss: 7.7407, Accuracy: 0.7202, Precision: 0.9524, Recall: 0.5333, F1 Score: 0.6838
+2024-11-27 18:47:49,532 - Epoch 55 Results: Train Loss = 47.3340, Train Acc = 0.8572, Val Loss = 7.7407, Val Acc = 0.7202, Precision = 0.9524, Recall = 0.5333, F1 = 0.6838
+2024-11-27 18:47:49,532 - Epoch 56/100
+2024-11-27 18:48:04,842 - Train Loss: 48.2228, Accuracy: 0.8513, Time: 15.31s
+2024-11-27 18:48:07,538 - Validation Loss: 6.5756, Accuracy: 0.8563, Precision: 0.8275, Recall: 0.9433, F1 Score: 0.8816
+2024-11-27 18:48:07,569 - Epoch 56 Results: Train Loss = 48.2228, Train Acc = 0.8513, Val Loss = 6.5756, Val Acc = 0.8563, Precision = 0.8275, Recall = 0.9433, F1 = 0.8816
+2024-11-27 18:48:07,569 - Epoch 57/100
+2024-11-27 18:48:22,655 - Train Loss: 48.0049, Accuracy: 0.8525, Time: 15.09s
+2024-11-27 18:48:25,255 - Validation Loss: 7.1674, Accuracy: 0.7921, Precision: 0.7461, Recall: 0.9600, F1 Score: 0.8397
+2024-11-27 18:48:25,286 - Epoch 57 Results: Train Loss = 48.0049, Train Acc = 0.8525, Val Loss = 7.1674, Val Acc = 0.7921, Precision = 0.7461, Recall = 0.9600, F1 = 0.8397
+2024-11-27 18:48:25,286 - Epoch 58/100
+2024-11-27 18:48:40,362 - Train Loss: 47.4918, Accuracy: 0.8480, Time: 15.08s
+2024-11-27 18:48:43,013 - Validation Loss: 6.2168, Accuracy: 0.8639, Precision: 0.9071, Recall: 0.8467, F1 Score: 0.8759
+2024-11-27 18:48:43,048 - Epoch 58 Results: Train Loss = 47.4918, Train Acc = 0.8480, Val Loss = 6.2168, Val Acc = 0.8639, Precision = 0.9071, Recall = 0.8467, F1 = 0.8759
+2024-11-27 18:48:43,048 - Epoch 59/100
+2024-11-27 18:48:58,400 - Train Loss: 47.6386, Accuracy: 0.8461, Time: 15.35s
+2024-11-27 18:49:01,145 - Validation Loss: 6.8311, Accuracy: 0.8280, Precision: 0.9485, Recall: 0.7367, F1 Score: 0.8293
+2024-11-27 18:49:01,185 - Epoch 59 Results: Train Loss = 47.6386, Train Acc = 0.8461, Val Loss = 6.8311, Val Acc = 0.8280, Precision = 0.9485, Recall = 0.7367, F1 = 0.8293
+2024-11-27 18:49:01,185 - Epoch 60/100
+2024-11-27 18:49:16,238 - Train Loss: 46.5759, Accuracy: 0.8591, Time: 15.05s
+2024-11-27 18:49:19,009 - Validation Loss: 6.2009, Accuracy: 0.8601, Precision: 0.9154, Recall: 0.8300, F1 Score: 0.8706
+2024-11-27 18:49:19,045 - Epoch 60 Results: Train Loss = 46.5759, Train Acc = 0.8591, Val Loss = 6.2009, Val Acc = 0.8601, Precision = 0.9154, Recall = 0.8300, F1 = 0.8706
+2024-11-27 18:49:19,045 - Epoch 61/100
+2024-11-27 18:49:34,251 - Train Loss: 47.5834, Accuracy: 0.8487, Time: 15.21s
+2024-11-27 18:49:36,872 - Validation Loss: 6.8619, Accuracy: 0.8015, Precision: 0.7586, Recall: 0.9533, F1 Score: 0.8449
+2024-11-27 18:49:36,910 - Epoch 61 Results: Train Loss = 47.5834, Train Acc = 0.8487, Val Loss = 6.8619, Val Acc = 0.8015, Precision = 0.7586, Recall = 0.9533, F1 = 0.8449
+2024-11-27 18:49:36,910 - Epoch 62/100
+2024-11-27 18:49:51,199 - Train Loss: 48.3579, Accuracy: 0.8397, Time: 14.29s
+2024-11-27 18:49:53,816 - Validation Loss: 6.5869, Accuracy: 0.8563, Precision: 0.9444, Recall: 0.7933, F1 Score: 0.8623
+2024-11-27 18:49:53,847 - Epoch 62 Results: Train Loss = 48.3579, Train Acc = 0.8397, Val Loss = 6.5869, Val Acc = 0.8563, Precision = 0.9444, Recall = 0.7933, F1 = 0.8623
+2024-11-27 18:49:53,847 - Epoch 63/100
+2024-11-27 18:50:08,587 - Train Loss: 46.2212, Accuracy: 0.8638, Time: 14.74s
+2024-11-27 18:50:11,272 - Validation Loss: 6.1599, Accuracy: 0.8639, Precision: 0.8878, Recall: 0.8700, F1 Score: 0.8788
+2024-11-27 18:50:11,310 - Epoch 63 Results: Train Loss = 46.2212, Train Acc = 0.8638, Val Loss = 6.1599, Val Acc = 0.8639, Precision = 0.8878, Recall = 0.8700, F1 = 0.8788
+2024-11-27 18:50:11,310 - Epoch 64/100
+2024-11-27 18:50:27,350 - Train Loss: 44.9874, Accuracy: 0.8638, Time: 16.04s
+2024-11-27 18:50:30,181 - Validation Loss: 6.5287, Accuracy: 0.8223, Precision: 0.7845, Recall: 0.9467, F1 Score: 0.8580
+2024-11-27 18:50:30,216 - Epoch 64 Results: Train Loss = 44.9874, Train Acc = 0.8638, Val Loss = 6.5287, Val Acc = 0.8223, Precision = 0.7845, Recall = 0.9467, F1 = 0.8580
+2024-11-27 18:50:30,216 - Epoch 65/100
+2024-11-27 18:50:45,724 - Train Loss: 46.1843, Accuracy: 0.8586, Time: 15.51s
+2024-11-27 18:50:48,348 - Validation Loss: 6.0747, Accuracy: 0.8601, Precision: 0.8844, Recall: 0.8667, F1 Score: 0.8754
+2024-11-27 18:50:48,385 - Epoch 65 Results: Train Loss = 46.1843, Train Acc = 0.8586, Val Loss = 6.0747, Val Acc = 0.8601, Precision = 0.8844, Recall = 0.8667, F1 = 0.8754
+2024-11-27 18:50:48,385 - Epoch 66/100
+2024-11-27 18:51:03,091 - Train Loss: 45.8288, Accuracy: 0.8589, Time: 14.71s
+2024-11-27 18:51:05,782 - Validation Loss: 6.6499, Accuracy: 0.8072, Precision: 0.7676, Recall: 0.9467, F1 Score: 0.8478
+2024-11-27 18:51:05,811 - Epoch 66 Results: Train Loss = 45.8288, Train Acc = 0.8589, Val Loss = 6.6499, Val Acc = 0.8072, Precision = 0.7676, Recall = 0.9467, F1 = 0.8478
+2024-11-27 18:51:05,811 - Epoch 67/100
+2024-11-27 18:51:20,351 - Train Loss: 45.4163, Accuracy: 0.8591, Time: 14.54s
+2024-11-27 18:51:23,225 - Validation Loss: 6.6246, Accuracy: 0.8166, Precision: 0.7781, Recall: 0.9467, F1 Score: 0.8541
+2024-11-27 18:51:23,261 - Epoch 67 Results: Train Loss = 45.4163, Train Acc = 0.8591, Val Loss = 6.6246, Val Acc = 0.8166, Precision = 0.7781, Recall = 0.9467, F1 = 0.8541
+2024-11-27 18:51:23,261 - Epoch 68/100
+2024-11-27 18:51:38,031 - Train Loss: 45.6066, Accuracy: 0.8539, Time: 14.77s
+2024-11-27 18:51:40,725 - Validation Loss: 6.3718, Accuracy: 0.8450, Precision: 0.8263, Recall: 0.9200, F1 Score: 0.8707
+2024-11-27 18:51:40,756 - Epoch 68 Results: Train Loss = 45.6066, Train Acc = 0.8539, Val Loss = 6.3718, Val Acc = 0.8450, Precision = 0.8263, Recall = 0.9200, F1 = 0.8707
+2024-11-27 18:51:40,757 - Epoch 69/100
+2024-11-27 18:51:55,608 - Train Loss: 45.7433, Accuracy: 0.8572, Time: 14.85s
+2024-11-27 18:51:58,254 - Validation Loss: 6.4115, Accuracy: 0.8261, Precision: 0.7889, Recall: 0.9467, F1 Score: 0.8606
+2024-11-27 18:51:58,288 - Epoch 69 Results: Train Loss = 45.7433, Train Acc = 0.8572, Val Loss = 6.4115, Val Acc = 0.8261, Precision = 0.7889, Recall = 0.9467, F1 = 0.8606
+2024-11-27 18:51:58,288 - Epoch 70/100
+2024-11-27 18:52:13,343 - Train Loss: 44.0016, Accuracy: 0.8730, Time: 15.06s
+2024-11-27 18:52:16,022 - Validation Loss: 6.2211, Accuracy: 0.8658, Precision: 0.8378, Recall: 0.9467, F1 Score: 0.8889
+2024-11-27 18:52:16,051 - Epoch 70 Results: Train Loss = 44.0016, Train Acc = 0.8730, Val Loss = 6.2211, Val Acc = 0.8658, Precision = 0.8378, Recall = 0.9467, F1 = 0.8889
+2024-11-27 18:52:16,051 - Epoch 71/100
+2024-11-27 18:52:30,472 - Train Loss: 44.1951, Accuracy: 0.8648, Time: 14.42s
+2024-11-27 18:52:33,047 - Validation Loss: 7.3075, Accuracy: 0.7656, Precision: 0.7200, Recall: 0.9600, F1 Score: 0.8229
+2024-11-27 18:52:33,077 - Epoch 71 Results: Train Loss = 44.1951, Train Acc = 0.8648, Val Loss = 7.3075, Val Acc = 0.7656, Precision = 0.7200, Recall = 0.9600, F1 = 0.8229
+2024-11-27 18:52:33,077 - Epoch 72/100
+2024-11-27 18:52:48,309 - Train Loss: 45.2516, Accuracy: 0.8641, Time: 15.23s
+2024-11-27 18:52:51,015 - Validation Loss: 6.4396, Accuracy: 0.8544, Precision: 0.9514, Recall: 0.7833, F1 Score: 0.8592
+2024-11-27 18:52:51,049 - Epoch 72 Results: Train Loss = 45.2516, Train Acc = 0.8641, Val Loss = 6.4396, Val Acc = 0.8544, Precision = 0.9514, Recall = 0.7833, F1 = 0.8592
+2024-11-27 18:52:51,049 - Epoch 73/100
+2024-11-27 18:53:06,414 - Train Loss: 45.5824, Accuracy: 0.8556, Time: 15.36s
+2024-11-27 18:53:09,088 - Validation Loss: 5.9760, Accuracy: 0.8620, Precision: 0.8746, Recall: 0.8833, F1 Score: 0.8789
+2024-11-27 18:53:09,123 - Epoch 73 Results: Train Loss = 45.5824, Train Acc = 0.8556, Val Loss = 5.9760, Val Acc = 0.8620, Precision = 0.8746, Recall = 0.8833, F1 = 0.8789
+2024-11-27 18:53:09,123 - Epoch 74/100
+2024-11-27 18:53:24,587 - Train Loss: 43.5142, Accuracy: 0.8681, Time: 15.46s
+2024-11-27 18:53:27,241 - Validation Loss: 6.8166, Accuracy: 0.7940, Precision: 0.7493, Recall: 0.9567, F1 Score: 0.8404
+2024-11-27 18:53:27,274 - Epoch 74 Results: Train Loss = 43.5142, Train Acc = 0.8681, Val Loss = 6.8166, Val Acc = 0.7940, Precision = 0.7493, Recall = 0.9567, F1 = 0.8404
+2024-11-27 18:53:27,274 - Epoch 75/100
+2024-11-27 18:53:42,737 - Train Loss: 45.8154, Accuracy: 0.8530, Time: 15.46s
+2024-11-27 18:53:45,393 - Validation Loss: 6.5005, Accuracy: 0.8299, Precision: 0.9487, Recall: 0.7400, F1 Score: 0.8315
+2024-11-27 18:53:45,426 - Epoch 75 Results: Train Loss = 45.8154, Train Acc = 0.8530, Val Loss = 6.5005, Val Acc = 0.8299, Precision = 0.9487, Recall = 0.7400, F1 = 0.8315
+2024-11-27 18:53:45,426 - Epoch 76/100
+2024-11-27 18:54:00,502 - Train Loss: 43.8093, Accuracy: 0.8700, Time: 15.08s
+2024-11-27 18:54:03,224 - Validation Loss: 5.8416, Accuracy: 0.8809, Precision: 0.9217, Recall: 0.8633, F1 Score: 0.8916
+2024-11-27 18:54:03,258 - Epoch 76 Results: Train Loss = 43.8093, Train Acc = 0.8700, Val Loss = 5.8416, Val Acc = 0.8809, Precision = 0.9217, Recall = 0.8633, F1 = 0.8916
+2024-11-27 18:54:03,258 - Epoch 77/100
+2024-11-27 18:54:17,806 - Train Loss: 42.9799, Accuracy: 0.8756, Time: 14.55s
+2024-11-27 18:54:20,481 - Validation Loss: 5.8162, Accuracy: 0.8658, Precision: 0.8908, Recall: 0.8700, F1 Score: 0.8803
+2024-11-27 18:54:20,516 - Epoch 77 Results: Train Loss = 42.9799, Train Acc = 0.8756, Val Loss = 5.8162, Val Acc = 0.8658, Precision = 0.8908, Recall = 0.8700, F1 = 0.8803
+2024-11-27 18:54:20,516 - Epoch 78/100
+2024-11-27 18:54:35,011 - Train Loss: 42.6704, Accuracy: 0.8730, Time: 14.49s
+2024-11-27 18:54:37,696 - Validation Loss: 6.4709, Accuracy: 0.8110, Precision: 0.7717, Recall: 0.9467, F1 Score: 0.8503
+2024-11-27 18:54:37,728 - Epoch 78 Results: Train Loss = 42.6704, Train Acc = 0.8730, Val Loss = 6.4709, Val Acc = 0.8110, Precision = 0.7717, Recall = 0.9467, F1 = 0.8503
+2024-11-27 18:54:37,729 - Epoch 79/100
+2024-11-27 18:54:52,512 - Train Loss: 42.3926, Accuracy: 0.8716, Time: 14.78s
+2024-11-27 18:54:55,124 - Validation Loss: 5.8360, Accuracy: 0.8601, Precision: 0.8767, Recall: 0.8767, F1 Score: 0.8767
+2024-11-27 18:54:55,156 - Epoch 79 Results: Train Loss = 42.3926, Train Acc = 0.8716, Val Loss = 5.8360, Val Acc = 0.8601, Precision = 0.8767, Recall = 0.8767, F1 = 0.8767
+2024-11-27 18:54:55,156 - Epoch 80/100
+2024-11-27 18:55:10,536 - Train Loss: 42.4926, Accuracy: 0.8763, Time: 15.38s
+2024-11-27 18:55:13,191 - Validation Loss: 5.8782, Accuracy: 0.8677, Precision: 0.9259, Recall: 0.8333, F1 Score: 0.8772
+2024-11-27 18:55:13,225 - Epoch 80 Results: Train Loss = 42.4926, Train Acc = 0.8763, Val Loss = 5.8782, Val Acc = 0.8677, Precision = 0.9259, Recall = 0.8333, F1 = 0.8772
+2024-11-27 18:55:13,225 - Epoch 81/100
+2024-11-27 18:55:28,529 - Train Loss: 42.6910, Accuracy: 0.8721, Time: 15.30s
+2024-11-27 18:55:31,391 - Validation Loss: 6.3847, Accuracy: 0.8185, Precision: 0.7757, Recall: 0.9567, F1 Score: 0.8567
+2024-11-27 18:55:31,422 - Epoch 81 Results: Train Loss = 42.6910, Train Acc = 0.8721, Val Loss = 6.3847, Val Acc = 0.8185, Precision = 0.7757, Recall = 0.9567, F1 = 0.8567
+2024-11-27 18:55:31,422 - Epoch 82/100
+2024-11-27 18:55:46,570 - Train Loss: 43.3542, Accuracy: 0.8629, Time: 15.15s
+2024-11-27 18:55:49,259 - Validation Loss: 5.8674, Accuracy: 0.8696, Precision: 0.8644, Recall: 0.9133, F1 Score: 0.8882
+2024-11-27 18:55:49,290 - Epoch 82 Results: Train Loss = 43.3542, Train Acc = 0.8629, Val Loss = 5.8674, Val Acc = 0.8696, Precision = 0.8644, Recall = 0.9133, F1 = 0.8882
+2024-11-27 18:55:49,290 - Epoch 83/100
+2024-11-27 18:56:04,650 - Train Loss: 42.3106, Accuracy: 0.8704, Time: 15.36s
+2024-11-27 18:56:07,304 - Validation Loss: 5.8173, Accuracy: 0.8639, Precision: 0.8677, Recall: 0.8967, F1 Score: 0.8820
+2024-11-27 18:56:07,334 - Epoch 83 Results: Train Loss = 42.3106, Train Acc = 0.8704, Val Loss = 5.8173, Val Acc = 0.8639, Precision = 0.8677, Recall = 0.8967, F1 = 0.8820
+2024-11-27 18:56:07,334 - Epoch 84/100
+2024-11-27 18:56:22,700 - Train Loss: 42.7624, Accuracy: 0.8704, Time: 15.37s
+2024-11-27 18:56:25,299 - Validation Loss: 5.8010, Accuracy: 0.8847, Precision: 0.8723, Recall: 0.9333, F1 Score: 0.9018
+2024-11-27 18:56:25,334 - Epoch 84 Results: Train Loss = 42.7624, Train Acc = 0.8704, Val Loss = 5.8010, Val Acc = 0.8847, Precision = 0.8723, Recall = 0.9333, F1 = 0.9018
+2024-11-27 18:56:25,334 - Epoch 85/100
+2024-11-27 18:56:39,613 - Train Loss: 41.7620, Accuracy: 0.8763, Time: 14.28s
+2024-11-27 18:56:42,496 - Validation Loss: 5.6049, Accuracy: 0.8790, Precision: 0.9214, Recall: 0.8600, F1 Score: 0.8897
+2024-11-27 18:56:42,532 - Epoch 85 Results: Train Loss = 41.7620, Train Acc = 0.8763, Val Loss = 5.6049, Val Acc = 0.8790, Precision = 0.9214, Recall = 0.8600, F1 = 0.8897
+2024-11-27 18:56:42,533 - Epoch 86/100
+2024-11-27 18:56:57,542 - Train Loss: 42.0546, Accuracy: 0.8737, Time: 15.01s
+2024-11-27 18:57:00,250 - Validation Loss: 5.6069, Accuracy: 0.8715, Precision: 0.8946, Recall: 0.8767, F1 Score: 0.8855
+2024-11-27 18:57:00,282 - Epoch 86 Results: Train Loss = 42.0546, Train Acc = 0.8737, Val Loss = 5.6069, Val Acc = 0.8715, Precision = 0.8946, Recall = 0.8767, F1 = 0.8855
+2024-11-27 18:57:00,282 - Epoch 87/100
+2024-11-27 18:57:15,628 - Train Loss: 41.7024, Accuracy: 0.8740, Time: 15.35s
+2024-11-27 18:57:18,294 - Validation Loss: 5.8626, Accuracy: 0.8790, Precision: 0.8554, Recall: 0.9467, F1 Score: 0.8987
+2024-11-27 18:57:18,325 - Epoch 87 Results: Train Loss = 41.7024, Train Acc = 0.8740, Val Loss = 5.8626, Val Acc = 0.8790, Precision = 0.8554, Recall = 0.9467, F1 = 0.8987
+2024-11-27 18:57:18,325 - Epoch 88/100
+2024-11-27 18:57:33,511 - Train Loss: 41.1668, Accuracy: 0.8813, Time: 15.19s
+2024-11-27 18:57:36,331 - Validation Loss: 5.6906, Accuracy: 0.8733, Precision: 0.9396, Recall: 0.8300, F1 Score: 0.8814
+2024-11-27 18:57:36,355 - Epoch 88 Results: Train Loss = 41.1668, Train Acc = 0.8813, Val Loss = 5.6906, Val Acc = 0.8733, Precision = 0.9396, Recall = 0.8300, F1 = 0.8814
+2024-11-27 18:57:36,355 - Epoch 89/100
+2024-11-27 18:57:50,911 - Train Loss: 41.6074, Accuracy: 0.8721, Time: 14.55s
+2024-11-27 18:57:53,465 - Validation Loss: 5.5801, Accuracy: 0.8790, Precision: 0.9184, Recall: 0.8633, F1 Score: 0.8900
+2024-11-27 18:57:53,497 - Epoch 89 Results: Train Loss = 41.6074, Train Acc = 0.8721, Val Loss = 5.5801, Val Acc = 0.8790, Precision = 0.9184, Recall = 0.8633, F1 = 0.8900
+2024-11-27 18:57:53,497 - Epoch 90/100
+2024-11-27 18:58:08,684 - Train Loss: 41.3632, Accuracy: 0.8700, Time: 15.19s
+2024-11-27 18:58:11,359 - Validation Loss: 6.0156, Accuracy: 0.8507, Precision: 0.8184, Recall: 0.9467, F1 Score: 0.8779
+2024-11-27 18:58:11,392 - Epoch 90 Results: Train Loss = 41.3632, Train Acc = 0.8700, Val Loss = 6.0156, Val Acc = 0.8507, Precision = 0.8184, Recall = 0.9467, F1 = 0.8779
+2024-11-27 18:58:11,392 - Epoch 91/100
+2024-11-27 18:58:26,728 - Train Loss: 41.1915, Accuracy: 0.8742, Time: 15.34s
+2024-11-27 18:58:29,448 - Validation Loss: 5.5457, Accuracy: 0.8866, Precision: 0.9348, Recall: 0.8600, F1 Score: 0.8958
+2024-11-27 18:58:29,479 - Epoch 91 Results: Train Loss = 41.1915, Train Acc = 0.8742, Val Loss = 5.5457, Val Acc = 0.8866, Precision = 0.9348, Recall = 0.8600, F1 = 0.8958
+2024-11-27 18:58:29,479 - Epoch 92/100
+2024-11-27 18:58:43,751 - Train Loss: 41.1653, Accuracy: 0.8768, Time: 14.27s
+2024-11-27 18:58:46,435 - Validation Loss: 5.8111, Accuracy: 0.8752, Precision: 0.9270, Recall: 0.8467, F1 Score: 0.8850
+2024-11-27 18:58:46,465 - Epoch 92 Results: Train Loss = 41.1653, Train Acc = 0.8768, Val Loss = 5.8111, Val Acc = 0.8752, Precision = 0.9270, Recall = 0.8467, F1 = 0.8850
+2024-11-27 18:58:46,465 - Epoch 93/100
+2024-11-27 18:59:00,304 - Train Loss: 41.9714, Accuracy: 0.8685, Time: 13.84s
+2024-11-27 18:59:02,989 - Validation Loss: 5.9297, Accuracy: 0.8563, Precision: 0.8256, Recall: 0.9467, F1 Score: 0.8820
+2024-11-27 18:59:03,021 - Epoch 93 Results: Train Loss = 41.9714, Train Acc = 0.8685, Val Loss = 5.9297, Val Acc = 0.8563, Precision = 0.8256, Recall = 0.9467, F1 = 0.8820
+2024-11-27 18:59:03,021 - Epoch 94/100
+2024-11-27 18:59:17,627 - Train Loss: 41.5775, Accuracy: 0.8780, Time: 14.61s
+2024-11-27 18:59:20,358 - Validation Loss: 5.5487, Accuracy: 0.8809, Precision: 0.9405, Recall: 0.8433, F1 Score: 0.8893
+2024-11-27 18:59:20,392 - Epoch 94 Results: Train Loss = 41.5775, Train Acc = 0.8780, Val Loss = 5.5487, Val Acc = 0.8809, Precision = 0.9405, Recall = 0.8433, F1 = 0.8893
+2024-11-27 18:59:20,392 - Epoch 95/100
+2024-11-27 18:59:35,295 - Train Loss: 40.2187, Accuracy: 0.8820, Time: 14.90s
+2024-11-27 18:59:37,942 - Validation Loss: 5.5483, Accuracy: 0.8885, Precision: 0.9382, Recall: 0.8600, F1 Score: 0.8974
+2024-11-27 18:59:37,971 - Epoch 95 Results: Train Loss = 40.2187, Train Acc = 0.8820, Val Loss = 5.5483, Val Acc = 0.8885, Precision = 0.9382, Recall = 0.8600, F1 = 0.8974
+2024-11-27 18:59:37,971 - Epoch 96/100
+2024-11-27 18:59:53,094 - Train Loss: 40.1827, Accuracy: 0.8825, Time: 15.12s
+2024-11-27 18:59:55,846 - Validation Loss: 5.6657, Accuracy: 0.8790, Precision: 0.8554, Recall: 0.9467, F1 Score: 0.8987
+2024-11-27 18:59:55,878 - Epoch 96 Results: Train Loss = 40.1827, Train Acc = 0.8825, Val Loss = 5.6657, Val Acc = 0.8790, Precision = 0.8554, Recall = 0.9467, F1 = 0.8987
+2024-11-27 18:59:55,879 - Epoch 97/100
+2024-11-27 19:00:10,153 - Train Loss: 39.9606, Accuracy: 0.8832, Time: 14.27s
+2024-11-27 19:00:12,760 - Validation Loss: 6.2412, Accuracy: 0.8147, Precision: 0.7715, Recall: 0.9567, F1 Score: 0.8542
+2024-11-27 19:00:12,793 - Epoch 97 Results: Train Loss = 39.9606, Train Acc = 0.8832, Val Loss = 6.2412, Val Acc = 0.8147, Precision = 0.7715, Recall = 0.9567, F1 = 0.8542
+2024-11-27 19:00:12,793 - Epoch 98/100
+2024-11-27 19:00:27,279 - Train Loss: 40.6958, Accuracy: 0.8754, Time: 14.49s
+2024-11-27 19:00:29,993 - Validation Loss: 5.4891, Accuracy: 0.8809, Precision: 0.9373, Recall: 0.8467, F1 Score: 0.8897
+2024-11-27 19:00:30,028 - Epoch 98 Results: Train Loss = 40.6958, Train Acc = 0.8754, Val Loss = 5.4891, Val Acc = 0.8809, Precision = 0.9373, Recall = 0.8467, F1 = 0.8897
+2024-11-27 19:00:30,028 - Epoch 99/100
+2024-11-27 19:00:45,419 - Train Loss: 39.9718, Accuracy: 0.8773, Time: 15.39s
+2024-11-27 19:00:48,089 - Validation Loss: 5.4331, Accuracy: 0.8715, Precision: 0.8742, Recall: 0.9033, F1 Score: 0.8885
+2024-11-27 19:00:48,124 - Epoch 99 Results: Train Loss = 39.9718, Train Acc = 0.8773, Val Loss = 5.4331, Val Acc = 0.8715, Precision = 0.8742, Recall = 0.9033, F1 = 0.8885
+2024-11-27 19:00:48,125 - Epoch 100/100
+2024-11-27 19:01:03,219 - Train Loss: 39.6385, Accuracy: 0.8834, Time: 15.09s
+2024-11-27 19:01:05,761 - Validation Loss: 5.4134, Accuracy: 0.8639, Precision: 0.8800, Recall: 0.8800, F1 Score: 0.8800
+2024-11-27 19:01:05,793 - Epoch 100 Results: Train Loss = 39.6385, Train Acc = 0.8834, Val Loss = 5.4134, Val Acc = 0.8639, Precision = 0.8800, Recall = 0.8800, F1 = 0.8800
+2024-11-27 19:01:05,793 - Training complete. Best model saved at: checkpoints/GraphConv_2layres_best_model.pt

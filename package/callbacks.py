@@ -1,4 +1,5 @@
 import logging
+import os
 from typing import Tuple, List, Union
 
 import dgl
@@ -10,10 +11,12 @@ from package.utils import plot_confusion_matrix, plot_curve
 
 
 # 配置日志
+if not os.path.exists('log'):
+    os.makedirs('log') 
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s - %(levelname)s - %(message)s",
-    handlers=[logging.StreamHandler(), logging.FileHandler("training.log")]
+    handlers=[logging.StreamHandler(), logging.FileHandler("log/training.log")]
 )
 logger = logging.getLogger(__name__)
 
