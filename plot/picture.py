@@ -2,8 +2,8 @@ import matplotlib.pyplot as plt
 import re
 
 
-# 解析日志文件，提取epoch和f1 score
 def parse_log(file_path):
+    """解析日志文件，提取 epoch 和 f1 score"""
     epochs = []
     f1_scores = []
 
@@ -29,27 +29,64 @@ def parse_log(file_path):
     return epochs, f1_scores
 
 
-# 日志文件路径
-epochs_sage, f1_sage = parse_log('GraphConv_2layers_dropout.log')  
-epochs_graph, f1_graph = parse_log('GraphConv_2layers_without_dropout.log')  
+def plot_f1_score(
+        a_log_path: str,
+        b_log_path: str,
+        a_label: str,
+        b_label: str,
+        title: str = 'F1 Score Comparison',
+        save_title: str = None
+):
+    """绘制 F1 Score 折线图"""
+    # 日志文件路径
+    epochs_a, f1_a = parse_log(a_log_path)
+    epochs_b, f1_b = parse_log(b_log_path)
+
+    # 绘制折线图
+    plt.figure(figsize=(10, 6))
+
+    # 检查数据是否存在再绘图
+    if epochs_a and f1_a:
+        plt.plot(epochs_a, f1_a, label=a_label, marker='o')
+    if epochs_b and f1_b:
+        plt.plot(epochs_b, f1_b, label=b_label, marker='o')
+
+    plt.title(title)
+    plt.xlabel('Epoch')
+    plt.ylabel('F1 Score')
+    plt.legend()
+    plt.grid(True)
+    if not save_title:
+        save_title = title
+    plt.savefig(f'img/{save_title}.png', dpi=300)
+    plt.savefig(f'img/{save_title}.svg', dpi=300)
+    plt.show()
 
 
-# 绘制折线图
-plt.figure(figsize=(10, 6))
-
-# 检查数据是否存在再绘图
-if epochs_sage and f1_sage:
-    plt.plot(epochs_sage, f1_sage, label="GraphConv_2layers with dropout", marker='o')
-if epochs_graph and f1_graph:
-    plt.plot(epochs_graph, f1_graph, label="GraphConv_2layers without dropout", marker='o')
-
-# 设置图表标题和标签
-plt.title('F1 Score Comparison: SAGEConv vs GraphConv')
-plt.xlabel('Epoch')
-plt.ylabel('F1 Score')
-plt.legend()
-
-# 显示图表
-plt.grid(True)
-plt.show()
-
+# GraphConv with and without dropout
+plot_f1_score(
+    'log/GraphConv_2layers_dropout.log', 
+    'log/GraphConv_2layers_without_dropout.log', 
+    'GraphConv_2layers with dropout', 
+    'GraphConv_2layers without dropout',
+    'F1 Score Comparison: GraphConv with and without dropout',
+    "GraphConv"
+)
+# SAGEConv with and without dropout
+plot_f1_score(
+    'log/SAGEConv_2layers_dropout.log', 
+    'log/SAGEConv_2layers_without_dropout.log', 
+    'SAGEConv_2layers with dropout', 
+    'SAGEConv_2layers without dropout',
+    'F1 Score Comparison: SAGEConv with and without dropout',
+    "SAGEConv"
+)
+# GraphConv and SAGEConv (with dropout)
+plot_f1_score(
+    'log/GraphConv_2layers_dropout.log', 
+    'log/SAGEConv_2layers_dropout.log', 
+    'GraphConv_2layers with dropout', 
+    'SAGEConv_2layers with dropout',
+    'F1 Score Comparison: GraphConv and SAGEConv (with dropout)',
+    "GraphConv_vs_SAGEConv"
+)
