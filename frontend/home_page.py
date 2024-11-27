@@ -6,15 +6,14 @@ import sys
 
 import pandas as pd
 import streamlit as st
-# import torch
 
 from style import heading
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(SCRIPT_DIR))
 
-# from package.model import MalwareDetector
 from main import VERSION
+from predict import mal_detect
 
 
 # 初始化 session state，记录已经检测的文件数
@@ -22,7 +21,7 @@ if 'predicted_num' not in st.session_state:
     st.session_state.predicted_num = 0
 
 # 初始化结果数据
-columns = ["filename", "size_kb", "is_mal", "is_apk"]
+columns = ["filename", "size_kb", "prob", "is_mal", "is_apk"]
 result_data = pd.DataFrame(columns=columns)
 
 
@@ -50,10 +49,6 @@ if uploaded_file_list:
     apk_count = len(uploaded_file_list) - st.session_state.predicted_num
     apk_processed = 0
 
-    # model = MalwareDetector(input_dimension=253, convolution_count=2, convolution_algorithm="GraphConv")
-    # model.load_state_dict(torch.load('../checkpoints/best_model.pt'))
-    # model.eval()  # 设置模型为评估模式
-
     for i, file in enumerate(uploaded_file_list):
         # 如果已经检测过，则跳过
         if i < st.session_state.predicted_num:
@@ -63,7 +58,8 @@ if uploaded_file_list:
         result_row = {
             "filename": file.name,
             "size_kb": file.size / 1024,
-            "is_mal": "非 APK 文件，无法检测",
+            "prob": -1,
+            "is_mal": "非 APK 文件",
             "is_apk": False,
         }
 
@@ -78,9 +74,9 @@ if uploaded_file_list:
             # 将 apk 保存到 tmp 文件夹下
             with open(f"tmp/{file.name}", "wb") as f:
                 f.write(file_bytes)
-            # TODO: 以下为检测部分
-            pass
-            # TODO: 以上为检测部分
+            # 进行检测
+            result_row["prob"] = mal_detect(f"tmp/{file.name}")
+            result_row["is_mal"] = "恶意软件" if result_row["prob"] > 0.5 else "正常软件"
 
         # 更新结果数据
         result_data = pd.concat(
@@ -104,6 +100,10 @@ if uploaded_file_list:
                 format="%.2f KB",
             ),
             "is_mal": "检测结果",
+            "prob": st.column_config.NumberColumn(
+                "恶意软件概率",
+                format="%.4f",
+            ),
             "is_apk": "是否为 APK 文件",
         }
     )

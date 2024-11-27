@@ -66,7 +66,7 @@ def predict(graph_path, model, device):
     return prob
 
 
-def main(apk_path_str):
+def mal_detect(apk_path_str):
     apk_path = Path(apk_path_str)
     processed_dir = Path("processed_temp")
     processed_dir.mkdir(exist_ok=True)
@@ -86,6 +86,8 @@ def main(apk_path_str):
     else:
         print(f"The APK {apk_path} is predicted to be BENIGN with probability {prob:.4f}")
 
+    return prob
+
 
 if __name__ == "__main__":
     """
@@ -97,4 +99,4 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Predict whether an APK file is malicious.")
     parser.add_argument("apk_path", type=str, help="Path to the APK file to be predicted.")
     args = parser.parse_args()
-    main(args.apk_path)
+    mal_detect(args.apk_path)
