@@ -13,6 +13,7 @@
     <img src="https://img.shields.io/badge/version-v0.1.0-brightgreen" alt="version">
     <img src="https://img.shields.io/badge/python-3.9+-yellow" alt="python">
     <img src="https://img.shields.io/badge/contributions-welcome-orange.svg" alt="contributions">
+    <img src="https://img.shields.io/github/license/R3c0ger/CialloDroid" alt="license">
 </p>
 
 <p  align="center" style="text-align:center">English | <a href="README_zh-CN.md">中文</a></p>
@@ -466,6 +467,20 @@ For static analysis of Android applications, tools such as [Androguard](https://
 2024-11-25 20:18:15,654 - Epoch 20 Results: Train Loss = 69.3225, Train Acc = 0.7541, Val Loss = 8.6644, Val Acc = 0.7826, Precision = 0.7778, Recall = 0.8633, F1 = 0.8183
 2024-11-25 20:18:15,654 - Training complete. Best model saved at: checkpoints/best_model.pt
 ```
+
+### F1 Score Comparison
+
+1. F1 Score Comparison between GraphConv and SAGEConv with 2 Layers and Dropout:
+
+![GraphConv_vs_SAGEConv](img/GraphConv_vs_SAGEConv.svg)
+
+2. F1 Score Comparison between GraphConv with and without Dropout:
+
+![GraphConv](img/GraphConv.svg)
+
+3. F1 Score Comparison between SAGEConv with and without Dropout:
+
+![SAGEConv](img/SAGEConv.svg)
 
 ## Acknowledgement
 

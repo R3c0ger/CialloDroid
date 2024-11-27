@@ -5,7 +5,7 @@ import dgl.nn.pytorch as graph_nn
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from torch.nn import ModuleList
+from torch.nn import ModuleList, Dropout
 
 
 class MalwareDetector(nn.Module):
@@ -14,6 +14,7 @@ class MalwareDetector(nn.Module):
             input_dimension: int,
             convolution_algorithm: str,
             convolution_count: int,
+            dropout_prob: float = 0.5  # 添加 Dropout 概率参数
     ):
         super().__init__()
         supported_algorithms = ['GraphConv', 'SAGEConv', 'TAGConv', 'DotGatConv']
@@ -23,6 +24,8 @@ class MalwareDetector(nn.Module):
                 f"Supported algorithms are {supported_algorithms}"
             )
         self.convolution_layers = ModuleList()  # 使用 ModuleList
+        self.dropout = Dropout(p=dropout_prob)  # 添加 Dropout 层
+
         convolution_dimensions = [64, 32, 16]
         for dimension in convolution_dimensions[:convolution_count]:
             self.convolution_layers.append(self._get_convolution_layer(
@@ -69,6 +72,7 @@ class MalwareDetector(nn.Module):
         h = g.ndata['features']  # 获取节点特征
         for layer in self.convolution_layers:
             h = layer(g, h)  # 逐层调用卷积层
+            h = self.dropout(h)  # 在每层卷积后应用 Dropout
         g.ndata['h'] = h  # 保存节点嵌入
         hg = dgl.mean_nodes(g, 'h', ntype=None)  # 使用平均池化获取每个图的特征
         return self.classify(hg).squeeze(-1)  # 确保输出为 [batch_size]
