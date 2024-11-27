@@ -7,7 +7,6 @@ import sys
 import pandas as pd
 import streamlit as st
 
-# from frontend.plot import plot
 from style import heading
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -35,7 +34,14 @@ if not os.path.exists(apk_save_path):
 
 
 heading("CialloDroid：基于图神经网络的安卓恶意软件检测模型", level=1)
-st.write(f"Version: {VERSION}")
+github_url = "https://github.com/R3c0ger/CialloDroid"
+st.write(
+    f"![Version](https://img.shields.io/badge/version-v{VERSION}-ff4b4b?"
+    f"style=for-the-badge)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+    f"[![GitHub](https://img.shields.io/badge/github-repo-ff4b4b?"
+    f"style=for-the-badge&logo=github&logoColor=white)]({github_url})"
+)
+
 heading("上传文件")
 st.write("在下方打开 APK 文件，或拖动 APK 文件到下方，将会自动进行检测。")
 uploaded_file_list = st.file_uploader(
@@ -83,7 +89,7 @@ if uploaded_file_list:
             with open(apk_path, "wb") as f:
                 f.write(file_bytes)
             # 进行检测
-            result_row["prob"], dgl_graph = mal_detect(apk_path)
+            result_row["prob"] = mal_detect(apk_path)
             result_row["is_mal"] = "恶意软件" if result_row["prob"] > 0.5 else "正常软件"
 
         # 更新结果数据
@@ -115,8 +121,6 @@ if uploaded_file_list:
             "is_apk": "是否为 APK 文件",
         }
     )
-
-    # plot(dgl_graph, result_data["filename"].iloc[-1])
 
     # 每次上传并检测完成后，重置进度条数据
     progress_bar = st.progress(0)
