@@ -1,7 +1,6 @@
 <!--suppress ALL -->
 
 <div align="center">
-    <!--<img src="resources/logo/logo_256.png" alt="logo_256" style="height: 120px" /> -->
 	<h1 style="padding-bottom: .3em !important; border-bottom: 1.5px solid #d0d7deb3 !important;">CialloDroid</h1>
 </div>
 
@@ -65,6 +64,18 @@ For static analysis of Android applications, tools such as [Androguard](https://
 - Requests==2.32.3
 - scikit_learn==1.5.2
 - torch==2.4.0
+
+## Usage
+
+1. Model Training
+  - Download the dataset: run `package/download_apks.py`;
+  - Process the APK files, extract the call graph, and save it as a DGL graph: run `package/process_dataset.py`;
+  - Train the model: run `train_model.py`;
+2. Model Deployment
+  - Single-file prediction: run `predict.py`, for example:
+  `python predict.py benign_apk.apk`
+  - Front-end deployment: ensure that streamlit is installed, run `frontend/home_page.py`, or enter the following command:
+  `streamlit run frontend/home_page.py`
 
 ## Experiment Results
 

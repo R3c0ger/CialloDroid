@@ -1,7 +1,6 @@
 <!--suppress ALL -->
 
 <div align="center">
-    <!--<img src="resources/logo/logo_256.png" alt="logo_256" style="height: 120px" /> -->
 	<h1 style="padding-bottom: .3em !important; border-bottom: 1.5px solid #d0d7deb3 !important;">CialloDroid</h1>
 </div>
 
@@ -65,6 +64,18 @@
 - Requests==2.32.3
 - scikit_learn==1.5.2
 - torch==2.4.0
+
+## 使用方法
+
+1. 模型训练
+  - 下载数据集：运行 `package/download_apks.py`；
+  - 处理 APK 文件，提取调用图并保存为 DGL 图：运行 `package/process_dataset.py`；
+  - 训练模型：运行 `train_model.py`；
+2. 模型部署
+  - 单文件预测：运行 `predict.py`，示例：
+  `python predict.py benign_apk.apk`
+  - 前端部署：确保安装 streamlit，运行 `frontend/home_page.py`，或输入如下命令：
+  `streamlit run frontend/home_page.py`
 
 ## 实验结果
 
