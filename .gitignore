@@ -97,5 +97,6 @@ ENV/
 
 *.conf
 data/*/
+processed_data/
 checkpoints/
 tmp/

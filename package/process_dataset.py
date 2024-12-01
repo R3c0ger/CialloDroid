@@ -145,7 +145,7 @@ class FeatureExtractors:
 
     @staticmethod
     def _get_api_trie() -> StringTrie:
-        apis = open('metadata/api.list').readlines()
+        apis = open('../metadata/api.list').readlines()
         api_list = {x.strip(): i for i, x in enumerate(apis)}
         api_trie = StringTrie(separator='.')
         for k, v in api_list.items():

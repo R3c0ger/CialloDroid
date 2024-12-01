@@ -3,6 +3,7 @@ import logging
 import matplotlib.pyplot as plt
 import numpy as np
 import plotly.express as px
+import seaborn as sns
 import torch
 
 
@@ -63,21 +64,24 @@ def plot_confusion_matrix(
     blanks = ['' for _ in range(cf.size)]
 
     if group_names and len(group_names) == cf.size:
-        group_labels = ["{}\n".format(value) for value in group_names]
+        group_labels = [f"{value}\n" for value in group_names]
     else:
         group_labels = blanks
 
     if count:
-        group_counts = ["{0:0.0f}\n".format(value) for value in cf.flatten()]
+        group_counts = [f"{value:0.0f}\n" for value in cf.flatten()]
     else:
         group_counts = blanks
 
     if percent:
-        group_percentages = ["{0:.2%}".format(value) for value in cf.flatten() / np.sum(cf)]
+        group_percentages = [f"{value:0.2%}\n" for value in cf.flatten() / np.sum(cf)]
     else:
         group_percentages = blanks
 
-    box_labels = [f"{v1}{v2}{v3}".strip() for v1, v2, v3 in zip(group_labels, group_counts, group_percentages)]
+    box_labels = [
+        f"{v1}{v2}{v3}".strip()
+        for v1, v2, v3 in zip(group_labels, group_counts, group_percentages)
+    ]
     box_labels = np.asarray(box_labels).reshape(cf.shape[0], cf.shape[1])
 
     # 计算并显示额外统计
@@ -105,7 +109,10 @@ def plot_confusion_matrix(
 
     # 绘制热图
     plt.figure(figsize=fig_size)
-    sns.heatmap(cf, annot=box_labels, fmt="", cmap=cmap, cbar=cbar, xticklabels=categories, yticklabels=categories)
+    sns.heatmap(
+        cf, annot=box_labels, fmt="", cmap=cmap, cbar=cbar,
+        xticklabels=categories, yticklabels=categories
+    )
 
     if xyplotlabels:
         plt.ylabel('True label')
