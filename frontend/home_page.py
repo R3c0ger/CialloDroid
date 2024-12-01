@@ -3,6 +3,7 @@
 
 import os
 import sys
+from pathlib import Path
 
 import pandas as pd
 import streamlit as st
@@ -25,14 +26,11 @@ columns = ["filename", "size_kb", "prob", "is_mal", "is_apk"]
 result_data = pd.DataFrame(columns=columns)
 
 # APK 保存路径
-temp_path = "tmp"
-if not os.path.exists(temp_path):
-    os.mkdir(temp_path)
-apk_save_path = f"{temp_path}/apk"
-if not os.path.exists(apk_save_path):
-    os.mkdir(apk_save_path)
+apk_save_path = Path("tmp/apk")
+apk_save_path.mkdir(parents=True, exist_ok=True)
 
 
+# 主页面
 heading("CialloDroid：基于图神经网络的安卓恶意软件检测模型", level=1)
 github_url = "https://github.com/R3c0ger/CialloDroid"
 st.write(
@@ -85,11 +83,10 @@ if uploaded_file_list:
         if file_header == "504b0304":
             result_row["is_apk"] = True
             # 将 apk 保存到 tmp 文件夹下
-            apk_path = f"{apk_save_path}/{file.name}"
-            with open(apk_path, "wb") as f:
-                f.write(file_bytes)
+            apk_path = apk_save_path / file.name
+            apk_path.write_bytes(file_bytes)
             # 进行检测
-            result_row["prob"] = mal_detect(apk_path)
+            result_row["prob"] = mal_detect(str(apk_path))
             result_row["is_mal"] = "恶意软件" if result_row["prob"] > 0.5 else "正常软件"
 
         # 更新结果数据

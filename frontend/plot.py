@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import os
+
+from pathlib import Path
 
 import networkx as nx
 import streamlit as st
@@ -26,7 +27,7 @@ def plt_plot(nx_graph, filename):
     st.pyplot(fig)
 
 
-def plot(dgl_graph, filename, show_in_st=True):
+def plot_dgl2pyvis(dgl_graph, filename, show_in_st=True):
     # 创建 PyVis 网络对象
     net = Network(notebook=True, height='750px', width='100%')
 
@@ -41,9 +42,9 @@ def plot(dgl_graph, filename, show_in_st=True):
         net.add_edge(src, dst)
 
     # 保存 PyVis 图为 HTML 文件
-    if not os.path.exists("tmp/graph"):
-        os.mkdir("tmp/graph")
-    net.show(f"tmp/graph/{filename}.html")
+    graph_dir = Path("tmp/graph")
+    graph_dir.mkdir(parents=True, exist_ok=True)
+    net.show(str(graph_dir / f"{filename}.html"))
 
     # 在 streamlit 中显示 PyVis 图
     if show_in_st:
