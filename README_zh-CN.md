@@ -74,7 +74,7 @@
 2. 模型部署
   - 单文件预测：运行 `predict.py`，示例：
   `python predict.py benign_apk.apk`
-  - 前端部署：确保安装 streamlit，运行 `frontend/home_page.py`，或输入如下命令：
+  - 前端部署：确保安装 streamlit，运行 `main.py`，或输入如下命令：
   `streamlit run frontend/home_page.py`
 
 ## 实验结果

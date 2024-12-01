@@ -74,7 +74,7 @@ For static analysis of Android applications, tools such as [Androguard](https://
 2. Model Deployment
   - Single-file prediction: run `predict.py`, for example:
   `python predict.py benign_apk.apk`
-  - Front-end deployment: ensure that streamlit is installed, run `frontend/home_page.py`, or enter the following command:
+  - Front-end deployment: ensure that streamlit is installed, run `main.py`, or enter the following command:
   `streamlit run frontend/home_page.py`
 
 ## Experiment Results
