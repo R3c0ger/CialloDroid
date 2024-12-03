@@ -51,7 +51,9 @@ For static analysis of Android applications, tools such as [Androguard](https://
 4. Design an experimental analysis method, requiring no fewer than 50 test samples for both malicious and normal applications, to evaluate the model's accuracy, recall rate, and F1 score.
 5. Based on group division of labor, write individual course reports to form a comprehensive project report.
 
-## Environment Setup
+## Project Information
+
+### Environment Setup
 
 - Python 3.9
 - androguard==3.4.0a1
@@ -65,7 +67,49 @@ For static analysis of Android applications, tools such as [Androguard](https://
 - scikit_learn==1.5.2
 - torch==2.4.0
 
-## Usage
+### Project Structure
+
+```
+├───.devcontainer/
+│   └───devcontainer.json
+├───data/  # Data files
+├───frontend/        # Front-end code
+│   ├───home_page.py # Streamlit home page
+│   ├───plot.py      # Plotting functions that can be called on the home page
+│   ├───style.py     # Style file, storing title styles as callable functions
+│   └───__init__.py
+├───img/
+├───log/             # Log files
+├───metadata/        # Store API list
+│   └───api.list
+├───package/               # project source code
+│   ├───callbacks.py       # provide classes that can monitor, record & visualize the performance metrics of the model during training
+│   ├───data_module.py     # Data module for loading the dataset
+│   ├───download_apks.py   # Download APK file dataset
+│   ├───model.py           # Define the model
+│   ├───plot_callgraph.py  # Plot the call graph
+│   ├───process_dataset.py # Process the dataset and extract the call graph
+│   ├───utils.py           # Utility functions
+│   └───__init__.py
+├───plot/
+│   └───plot_f1_score.py   # Plot the F1 Score comparison curve
+├───train_model.py         # Train the model
+├───predict.py             # Predict a single APK file
+├───main.py                # Main program entry, used to start the front end
+├───generate_sha256_file.py
+├───is-task-2.pdf
+├───.gitignore
+├───LICENSE
+├───README.md
+├───README_zh-CN.md
+└───requirements.txt
+```
+
+### Network Structure
+
+![GCN.svg](img/GCN.svg)
+
+### Project Procedure and Usage
 
 1. Model Training
   - Download the dataset: run `package/download_apks.py`;
@@ -76,6 +120,8 @@ For static analysis of Android applications, tools such as [Androguard](https://
   `python predict.py benign_apk.apk`
   - Front-end deployment: ensure that streamlit is installed, run `main.py`, or enter the following command:
   `streamlit run frontend/home_page.py`
+
+![procedure-en](img/procedure-en.svg)
 
 ## Experiment Results
 
@@ -492,6 +538,12 @@ For static analysis of Android applications, tools such as [Androguard](https://
 3. F1 Score Comparison between SAGEConv with and without Dropout:
 
 ![SAGEConv](img/SAGEConv.svg)
+
+### Frontend Interface
+
+![frontend-1.png](img/frontend-1.png)
+
+![frontend-2.png](img/frontend-2.png)
 
 ## Acknowledgement
 
